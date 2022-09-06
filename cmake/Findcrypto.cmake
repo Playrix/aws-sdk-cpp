@@ -47,23 +47,23 @@ else()
         PATH_SUFFIXES build/crypto build lib64 lib
     )
 
-    find_library(crypto_STATIC_LIBRARY
-        NAMES libcrypto.a
-        HINTS
-        "${CMAKE_PREFIX_PATH}"
-        "${CMAKE_INSTALL_PREFIX}"
-        PATH_SUFFIXES build/crypto build lib64 lib
-    )
+#    find_library(crypto_STATIC_LIBRARY
+#        NAMES libcrypto.a
+#        HINTS
+#        "${CMAKE_PREFIX_PATH}"
+#        "${CMAKE_INSTALL_PREFIX}"
+#        PATH_SUFFIXES build/crypto build lib64 lib
+#    )
 
     if (NOT crypto_LIBRARY)
         if (BUILD_SHARED_LIBS)
             set(crypto_LIBRARY ${crypto_SHARED_LIBRARY})
         else()
-            if (crypto_STATIC_LIBRARY)
-               set(crypto_LIBRARY ${crypto_STATIC_LIBRARY})
-            else()
+#            if (crypto_STATIC_LIBRARY)
+#               set(crypto_LIBRARY ${crypto_STATIC_LIBRARY})
+#            else()
                set(crypto_LIBRARY ${crypto_SHARED_LIBRARY})
-            endif()
+#            endif()
         endif()
     endif()
 
