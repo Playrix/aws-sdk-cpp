@@ -17,6 +17,7 @@
 #include <aws/sagemaker/model/FeatureGroup.h>
 #include <aws/sagemaker/model/Project.h>
 #include <aws/sagemaker/model/FeatureMetadata.h>
+#include <aws/sagemaker/model/HyperParameterTuningJobSearchEntity.h>
 #include <utility>
 
 namespace Aws
@@ -348,43 +349,77 @@ namespace Model
      */
     inline SearchRecord& WithFeatureMetadata(FeatureMetadata&& value) { SetFeatureMetadata(std::move(value)); return *this;}
 
+
+    /**
+     * <p>The properties of a hyperparameter tuning job.</p>
+     */
+    inline const HyperParameterTuningJobSearchEntity& GetHyperParameterTuningJob() const{ return m_hyperParameterTuningJob; }
+
+    /**
+     * <p>The properties of a hyperparameter tuning job.</p>
+     */
+    inline bool HyperParameterTuningJobHasBeenSet() const { return m_hyperParameterTuningJobHasBeenSet; }
+
+    /**
+     * <p>The properties of a hyperparameter tuning job.</p>
+     */
+    inline void SetHyperParameterTuningJob(const HyperParameterTuningJobSearchEntity& value) { m_hyperParameterTuningJobHasBeenSet = true; m_hyperParameterTuningJob = value; }
+
+    /**
+     * <p>The properties of a hyperparameter tuning job.</p>
+     */
+    inline void SetHyperParameterTuningJob(HyperParameterTuningJobSearchEntity&& value) { m_hyperParameterTuningJobHasBeenSet = true; m_hyperParameterTuningJob = std::move(value); }
+
+    /**
+     * <p>The properties of a hyperparameter tuning job.</p>
+     */
+    inline SearchRecord& WithHyperParameterTuningJob(const HyperParameterTuningJobSearchEntity& value) { SetHyperParameterTuningJob(value); return *this;}
+
+    /**
+     * <p>The properties of a hyperparameter tuning job.</p>
+     */
+    inline SearchRecord& WithHyperParameterTuningJob(HyperParameterTuningJobSearchEntity&& value) { SetHyperParameterTuningJob(std::move(value)); return *this;}
+
   private:
 
     TrainingJob m_trainingJob;
-    bool m_trainingJobHasBeenSet;
+    bool m_trainingJobHasBeenSet = false;
 
     Experiment m_experiment;
-    bool m_experimentHasBeenSet;
+    bool m_experimentHasBeenSet = false;
 
     Trial m_trial;
-    bool m_trialHasBeenSet;
+    bool m_trialHasBeenSet = false;
 
     TrialComponent m_trialComponent;
-    bool m_trialComponentHasBeenSet;
+    bool m_trialComponentHasBeenSet = false;
 
     Endpoint m_endpoint;
-    bool m_endpointHasBeenSet;
+    bool m_endpointHasBeenSet = false;
 
     ModelPackage m_modelPackage;
-    bool m_modelPackageHasBeenSet;
+    bool m_modelPackageHasBeenSet = false;
 
     ModelPackageGroup m_modelPackageGroup;
-    bool m_modelPackageGroupHasBeenSet;
+    bool m_modelPackageGroupHasBeenSet = false;
 
     Pipeline m_pipeline;
-    bool m_pipelineHasBeenSet;
+    bool m_pipelineHasBeenSet = false;
 
     PipelineExecution m_pipelineExecution;
-    bool m_pipelineExecutionHasBeenSet;
+    bool m_pipelineExecutionHasBeenSet = false;
 
     FeatureGroup m_featureGroup;
-    bool m_featureGroupHasBeenSet;
+    bool m_featureGroupHasBeenSet = false;
 
     Project m_project;
-    bool m_projectHasBeenSet;
+    bool m_projectHasBeenSet = false;
 
     FeatureMetadata m_featureMetadata;
-    bool m_featureMetadataHasBeenSet;
+    bool m_featureMetadataHasBeenSet = false;
+
+    HyperParameterTuningJobSearchEntity m_hyperParameterTuningJob;
+    bool m_hyperParameterTuningJobHasBeenSet = false;
   };
 
 } // namespace Model

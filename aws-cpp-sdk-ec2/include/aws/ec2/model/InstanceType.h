@@ -583,7 +583,12 @@ namespace Model
     r6a_32xlarge,
     r6a_48xlarge,
     r6a_metal,
-    p4de_24xlarge
+    p4de_24xlarge,
+    u_3tb1_56xlarge,
+    u_18tb1_112xlarge,
+    u_24tb1_112xlarge,
+    trn1_2xlarge,
+    trn1_32xlarge
   };
 
 namespace InstanceTypeMapper

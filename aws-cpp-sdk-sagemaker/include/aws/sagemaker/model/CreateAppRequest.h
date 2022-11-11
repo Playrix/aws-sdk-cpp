@@ -121,38 +121,32 @@ namespace Model
 
 
     /**
-     * <p>The type of app. Supported apps are <code>JupyterServer</code> and
-     * <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
+     * <p>The type of app.</p>
      */
     inline const AppType& GetAppType() const{ return m_appType; }
 
     /**
-     * <p>The type of app. Supported apps are <code>JupyterServer</code> and
-     * <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
+     * <p>The type of app.</p>
      */
     inline bool AppTypeHasBeenSet() const { return m_appTypeHasBeenSet; }
 
     /**
-     * <p>The type of app. Supported apps are <code>JupyterServer</code> and
-     * <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
+     * <p>The type of app.</p>
      */
     inline void SetAppType(const AppType& value) { m_appTypeHasBeenSet = true; m_appType = value; }
 
     /**
-     * <p>The type of app. Supported apps are <code>JupyterServer</code> and
-     * <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
+     * <p>The type of app.</p>
      */
     inline void SetAppType(AppType&& value) { m_appTypeHasBeenSet = true; m_appType = std::move(value); }
 
     /**
-     * <p>The type of app. Supported apps are <code>JupyterServer</code> and
-     * <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
+     * <p>The type of app.</p>
      */
     inline CreateAppRequest& WithAppType(const AppType& value) { SetAppType(value); return *this;}
 
     /**
-     * <p>The type of app. Supported apps are <code>JupyterServer</code> and
-     * <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
+     * <p>The type of app.</p>
      */
     inline CreateAppRequest& WithAppType(AppType&& value) { SetAppType(std::move(value)); return *this;}
 
@@ -322,22 +316,22 @@ namespace Model
   private:
 
     Aws::String m_domainId;
-    bool m_domainIdHasBeenSet;
+    bool m_domainIdHasBeenSet = false;
 
     Aws::String m_userProfileName;
-    bool m_userProfileNameHasBeenSet;
+    bool m_userProfileNameHasBeenSet = false;
 
     AppType m_appType;
-    bool m_appTypeHasBeenSet;
+    bool m_appTypeHasBeenSet = false;
 
     Aws::String m_appName;
-    bool m_appNameHasBeenSet;
+    bool m_appNameHasBeenSet = false;
 
     Aws::Vector<Tag> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
 
     ResourceSpec m_resourceSpec;
-    bool m_resourceSpecHasBeenSet;
+    bool m_resourceSpecHasBeenSet = false;
   };
 
 } // namespace Model

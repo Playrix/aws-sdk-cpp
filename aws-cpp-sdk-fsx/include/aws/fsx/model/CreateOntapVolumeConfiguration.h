@@ -98,8 +98,12 @@ namespace Model
 
 
     /**
-     * <p>The security style for the volume. If a volume's security style is not
-     * specified, it is automatically set to the root volume's security style. Specify
+     * <p>Specifies the security style for the volume. If a volume's security style is
+     * not specified, it is automatically set to the root volume's security style. The
+     * security style determines the type of permissions that FSx for ONTAP uses to
+     * control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify
      * one of the following values:</p> <ul> <li> <p> <code>UNIX</code> if the file
      * system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service
@@ -113,8 +117,12 @@ namespace Model
     inline const SecurityStyle& GetSecurityStyle() const{ return m_securityStyle; }
 
     /**
-     * <p>The security style for the volume. If a volume's security style is not
-     * specified, it is automatically set to the root volume's security style. Specify
+     * <p>Specifies the security style for the volume. If a volume's security style is
+     * not specified, it is automatically set to the root volume's security style. The
+     * security style determines the type of permissions that FSx for ONTAP uses to
+     * control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify
      * one of the following values:</p> <ul> <li> <p> <code>UNIX</code> if the file
      * system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service
@@ -128,8 +136,12 @@ namespace Model
     inline bool SecurityStyleHasBeenSet() const { return m_securityStyleHasBeenSet; }
 
     /**
-     * <p>The security style for the volume. If a volume's security style is not
-     * specified, it is automatically set to the root volume's security style. Specify
+     * <p>Specifies the security style for the volume. If a volume's security style is
+     * not specified, it is automatically set to the root volume's security style. The
+     * security style determines the type of permissions that FSx for ONTAP uses to
+     * control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify
      * one of the following values:</p> <ul> <li> <p> <code>UNIX</code> if the file
      * system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service
@@ -143,8 +155,12 @@ namespace Model
     inline void SetSecurityStyle(const SecurityStyle& value) { m_securityStyleHasBeenSet = true; m_securityStyle = value; }
 
     /**
-     * <p>The security style for the volume. If a volume's security style is not
-     * specified, it is automatically set to the root volume's security style. Specify
+     * <p>Specifies the security style for the volume. If a volume's security style is
+     * not specified, it is automatically set to the root volume's security style. The
+     * security style determines the type of permissions that FSx for ONTAP uses to
+     * control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify
      * one of the following values:</p> <ul> <li> <p> <code>UNIX</code> if the file
      * system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service
@@ -158,8 +174,12 @@ namespace Model
     inline void SetSecurityStyle(SecurityStyle&& value) { m_securityStyleHasBeenSet = true; m_securityStyle = std::move(value); }
 
     /**
-     * <p>The security style for the volume. If a volume's security style is not
-     * specified, it is automatically set to the root volume's security style. Specify
+     * <p>Specifies the security style for the volume. If a volume's security style is
+     * not specified, it is automatically set to the root volume's security style. The
+     * security style determines the type of permissions that FSx for ONTAP uses to
+     * control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify
      * one of the following values:</p> <ul> <li> <p> <code>UNIX</code> if the file
      * system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service
@@ -173,8 +193,12 @@ namespace Model
     inline CreateOntapVolumeConfiguration& WithSecurityStyle(const SecurityStyle& value) { SetSecurityStyle(value); return *this;}
 
     /**
-     * <p>The security style for the volume. If a volume's security style is not
-     * specified, it is automatically set to the root volume's security style. Specify
+     * <p>Specifies the security style for the volume. If a volume's security style is
+     * not specified, it is automatically set to the root volume's security style. The
+     * security style determines the type of permissions that FSx for ONTAP uses to
+     * control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify
      * one of the following values:</p> <ul> <li> <p> <code>UNIX</code> if the file
      * system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service
@@ -300,22 +324,22 @@ namespace Model
   private:
 
     Aws::String m_junctionPath;
-    bool m_junctionPathHasBeenSet;
+    bool m_junctionPathHasBeenSet = false;
 
     SecurityStyle m_securityStyle;
-    bool m_securityStyleHasBeenSet;
+    bool m_securityStyleHasBeenSet = false;
 
     int m_sizeInMegabytes;
-    bool m_sizeInMegabytesHasBeenSet;
+    bool m_sizeInMegabytesHasBeenSet = false;
 
     bool m_storageEfficiencyEnabled;
-    bool m_storageEfficiencyEnabledHasBeenSet;
+    bool m_storageEfficiencyEnabledHasBeenSet = false;
 
     Aws::String m_storageVirtualMachineId;
-    bool m_storageVirtualMachineIdHasBeenSet;
+    bool m_storageVirtualMachineIdHasBeenSet = false;
 
     TieringPolicy m_tieringPolicy;
-    bool m_tieringPolicyHasBeenSet;
+    bool m_tieringPolicyHasBeenSet = false;
   };
 
 } // namespace Model

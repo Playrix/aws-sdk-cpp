@@ -85,10 +85,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline const Aws::String& GetDBName() const{ return m_dBName; }
 
@@ -135,10 +134,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline bool DBNameHasBeenSet() const { return m_dBNameHasBeenSet; }
 
@@ -185,10 +183,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline void SetDBName(const Aws::String& value) { m_dBNameHasBeenSet = true; m_dBName = value; }
 
@@ -235,10 +232,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline void SetDBName(Aws::String&& value) { m_dBNameHasBeenSet = true; m_dBName = std::move(value); }
 
@@ -285,10 +281,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline void SetDBName(const char* value) { m_dBNameHasBeenSet = true; m_dBName.assign(value); }
 
@@ -335,10 +330,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline CreateDBInstanceRequest& WithDBName(const Aws::String& value) { SetDBName(value); return *this;}
 
@@ -385,10 +379,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline CreateDBInstanceRequest& WithDBName(Aws::String&& value) { SetDBName(std::move(value)); return *this;}
 
@@ -435,10 +428,9 @@ namespace Model
      * PostgreSQL DB cluster is created. If this parameter isn't specified for an
      * Aurora PostgreSQL DB cluster, a database named <code>postgres</code> is created
      * in the DB cluster.</p> <p>Constraints:</p> <ul> <li> <p>It must contain 1 to 63
-     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter or an
-     * underscore. Subsequent characters can be letters, underscores, or digits (0 to
-     * 9).</p> </li> <li> <p>It can't be a word reserved by the database engine.</p>
-     * </li> </ul>
+     * alphanumeric characters.</p> </li> <li> <p>It must begin with a letter.
+     * Subsequent characters can be letters, underscores, or digits (0 to 9).</p> </li>
+     * <li> <p>It can't be a word reserved by the database engine.</p> </li> </ul>
      */
     inline CreateDBInstanceRequest& WithDBName(const char* value) { SetDBName(value); return *this;}
 
@@ -523,41 +515,41 @@ namespace Model
      * increases, though you are only charged for the space that you use in an Aurora
      * cluster volume.</p> <p> <b>Amazon RDS Custom</b> </p> <p>Constraints to the
      * amount of storage for each storage type are the following:</p> <ul> <li>
-     * <p>General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for
-     * RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
+     * <p>General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536
+     * for RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
      * <p>Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS
      * Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> </ul> <p>
      * <b>MySQL</b> </p> <p>Constraints to the amount of storage for each storage type
-     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be
-     * an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1):
-     * Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
+     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
+     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
      * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>MariaDB</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
-     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
-     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>PostgreSQL</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * <b>Oracle</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
      * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
      * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p> <b>Oracle</b>
-     * </p> <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be an
-     * integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1): Must
-     * be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage (standard):
-     * Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL Server</b> </p>
-     * <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 16384.</p>
-     * </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 100 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 100 to
-     * 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 1024.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 1024.</p>
-     * </li> </ul> </li> </ul>
+     * (standard): Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL
+     * Server</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3):</p> <ul> <li> <p>Enterprise and Standard editions: Must be an integer from
+     * 20 to 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from
+     * 20 to 16384.</p> </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p>
+     * <ul> <li> <p>Enterprise and Standard editions: Must be an integer from 100 to
+     * 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from 100
+     * to 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul>
+     * <li> <p>Enterprise and Standard editions: Must be an integer from 20 to
+     * 1024.</p> </li> <li> <p>Web and Express editions: Must be an integer from 20 to
+     * 1024.</p> </li> </ul> </li> </ul>
      */
     inline int GetAllocatedStorage() const{ return m_allocatedStorage; }
 
@@ -568,41 +560,41 @@ namespace Model
      * increases, though you are only charged for the space that you use in an Aurora
      * cluster volume.</p> <p> <b>Amazon RDS Custom</b> </p> <p>Constraints to the
      * amount of storage for each storage type are the following:</p> <ul> <li>
-     * <p>General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for
-     * RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
+     * <p>General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536
+     * for RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
      * <p>Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS
      * Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> </ul> <p>
      * <b>MySQL</b> </p> <p>Constraints to the amount of storage for each storage type
-     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be
-     * an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1):
-     * Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
+     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
+     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
      * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>MariaDB</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
-     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
-     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>PostgreSQL</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * <b>Oracle</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
      * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
      * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p> <b>Oracle</b>
-     * </p> <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be an
-     * integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1): Must
-     * be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage (standard):
-     * Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL Server</b> </p>
-     * <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 16384.</p>
-     * </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 100 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 100 to
-     * 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 1024.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 1024.</p>
-     * </li> </ul> </li> </ul>
+     * (standard): Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL
+     * Server</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3):</p> <ul> <li> <p>Enterprise and Standard editions: Must be an integer from
+     * 20 to 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from
+     * 20 to 16384.</p> </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p>
+     * <ul> <li> <p>Enterprise and Standard editions: Must be an integer from 100 to
+     * 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from 100
+     * to 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul>
+     * <li> <p>Enterprise and Standard editions: Must be an integer from 20 to
+     * 1024.</p> </li> <li> <p>Web and Express editions: Must be an integer from 20 to
+     * 1024.</p> </li> </ul> </li> </ul>
      */
     inline bool AllocatedStorageHasBeenSet() const { return m_allocatedStorageHasBeenSet; }
 
@@ -613,41 +605,41 @@ namespace Model
      * increases, though you are only charged for the space that you use in an Aurora
      * cluster volume.</p> <p> <b>Amazon RDS Custom</b> </p> <p>Constraints to the
      * amount of storage for each storage type are the following:</p> <ul> <li>
-     * <p>General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for
-     * RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
+     * <p>General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536
+     * for RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
      * <p>Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS
      * Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> </ul> <p>
      * <b>MySQL</b> </p> <p>Constraints to the amount of storage for each storage type
-     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be
-     * an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1):
-     * Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
+     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
+     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
      * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>MariaDB</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
-     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
-     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>PostgreSQL</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * <b>Oracle</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
      * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
      * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p> <b>Oracle</b>
-     * </p> <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be an
-     * integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1): Must
-     * be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage (standard):
-     * Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL Server</b> </p>
-     * <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 16384.</p>
-     * </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 100 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 100 to
-     * 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 1024.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 1024.</p>
-     * </li> </ul> </li> </ul>
+     * (standard): Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL
+     * Server</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3):</p> <ul> <li> <p>Enterprise and Standard editions: Must be an integer from
+     * 20 to 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from
+     * 20 to 16384.</p> </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p>
+     * <ul> <li> <p>Enterprise and Standard editions: Must be an integer from 100 to
+     * 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from 100
+     * to 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul>
+     * <li> <p>Enterprise and Standard editions: Must be an integer from 20 to
+     * 1024.</p> </li> <li> <p>Web and Express editions: Must be an integer from 20 to
+     * 1024.</p> </li> </ul> </li> </ul>
      */
     inline void SetAllocatedStorage(int value) { m_allocatedStorageHasBeenSet = true; m_allocatedStorage = value; }
 
@@ -658,41 +650,41 @@ namespace Model
      * increases, though you are only charged for the space that you use in an Aurora
      * cluster volume.</p> <p> <b>Amazon RDS Custom</b> </p> <p>Constraints to the
      * amount of storage for each storage type are the following:</p> <ul> <li>
-     * <p>General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for
-     * RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
+     * <p>General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536
+     * for RDS Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> <li>
      * <p>Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS
      * Custom for Oracle, 16384 for RDS Custom for SQL Server.</p> </li> </ul> <p>
      * <b>MySQL</b> </p> <p>Constraints to the amount of storage for each storage type
-     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be
-     * an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1):
-     * Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
+     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
+     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
      * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>MariaDB</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
-     * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
-     * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
      * <b>PostgreSQL</b> </p> <p>Constraints to the amount of storage for each storage
-     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):
+     * type are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3): Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS
+     * storage (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic
+     * storage (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p>
+     * <b>Oracle</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2, gp3):
      * Must be an integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage
      * (io1): Must be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage
-     * (standard): Must be an integer from 5 to 3072.</p> </li> </ul> <p> <b>Oracle</b>
-     * </p> <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2): Must be an
-     * integer from 20 to 65536.</p> </li> <li> <p>Provisioned IOPS storage (io1): Must
-     * be an integer from 100 to 65536.</p> </li> <li> <p>Magnetic storage (standard):
-     * Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL Server</b> </p>
-     * <p>Constraints to the amount of storage for each storage type are the
-     * following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 16384.</p>
-     * </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 100 to 16384.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 100 to
-     * 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul> <li>
-     * <p>Enterprise and Standard editions: Must be an integer from 20 to 1024.</p>
-     * </li> <li> <p>Web and Express editions: Must be an integer from 20 to 1024.</p>
-     * </li> </ul> </li> </ul>
+     * (standard): Must be an integer from 10 to 3072.</p> </li> </ul> <p> <b>SQL
+     * Server</b> </p> <p>Constraints to the amount of storage for each storage type
+     * are the following:</p> <ul> <li> <p>General Purpose (SSD) storage (gp2,
+     * gp3):</p> <ul> <li> <p>Enterprise and Standard editions: Must be an integer from
+     * 20 to 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from
+     * 20 to 16384.</p> </li> </ul> </li> <li> <p>Provisioned IOPS storage (io1):</p>
+     * <ul> <li> <p>Enterprise and Standard editions: Must be an integer from 100 to
+     * 16384.</p> </li> <li> <p>Web and Express editions: Must be an integer from 100
+     * to 16384.</p> </li> </ul> </li> <li> <p>Magnetic storage (standard):</p> <ul>
+     * <li> <p>Enterprise and Standard editions: Must be an integer from 20 to
+     * 1024.</p> </li> <li> <p>Web and Express editions: Must be an integer from 20 to
+     * 1024.</p> </li> </ul> </li> </ul>
      */
     inline CreateDBInstanceRequest& WithAllocatedStorage(int value) { SetAllocatedStorage(value); return *this;}
 
@@ -1590,9 +1582,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline const Aws::String& GetDBParameterGroupName() const{ return m_dBParameterGroupName; }
 
@@ -1600,9 +1593,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline bool DBParameterGroupNameHasBeenSet() const { return m_dBParameterGroupNameHasBeenSet; }
 
@@ -1610,9 +1604,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline void SetDBParameterGroupName(const Aws::String& value) { m_dBParameterGroupNameHasBeenSet = true; m_dBParameterGroupName = value; }
 
@@ -1620,9 +1615,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline void SetDBParameterGroupName(Aws::String&& value) { m_dBParameterGroupNameHasBeenSet = true; m_dBParameterGroupName = std::move(value); }
 
@@ -1630,9 +1626,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline void SetDBParameterGroupName(const char* value) { m_dBParameterGroupNameHasBeenSet = true; m_dBParameterGroupName.assign(value); }
 
@@ -1640,9 +1637,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline CreateDBInstanceRequest& WithDBParameterGroupName(const Aws::String& value) { SetDBParameterGroupName(value); return *this;}
 
@@ -1650,9 +1648,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline CreateDBInstanceRequest& WithDBParameterGroupName(Aws::String&& value) { SetDBParameterGroupName(std::move(value)); return *this;}
 
@@ -1660,9 +1659,10 @@ namespace Model
      * <p>The name of the DB parameter group to associate with this DB instance. If you
      * do not specify a value, then the default DB parameter group for the specified DB
      * engine and version is used.</p> <p>This setting doesn't apply to RDS Custom.</p>
-     * <p>Constraints:</p> <ul> <li> <p>Must be 1 to 255 letters, numbers, or
-     * hyphens.</p> </li> <li> <p>First character must be a letter</p> </li> <li>
-     * <p>Can't end with a hyphen or contain two consecutive hyphens</p> </li> </ul>
+     * <p>Constraints:</p> <ul> <li> <p>It must be 1 to 255 letters, numbers, or
+     * hyphens.</p> </li> <li> <p>The first character must be a letter.</p> </li> <li>
+     * <p>It can't end with a hyphen or contain two consecutive hyphens.</p> </li>
+     * </ul>
      */
     inline CreateDBInstanceRequest& WithDBParameterGroupName(const char* value) { SetDBParameterGroupName(value); return *this;}
 
@@ -2344,57 +2344,57 @@ namespace Model
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
-     * initially allocated for the DB instance. For information about valid
-     * <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL
-     * DB instances, must be a multiple between .5 and 50 of the storage amount for the
-     * DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of
-     * the storage amount for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not
-     * applicable. Storage is managed by the DB cluster.</p>
+     * initially allocated for the DB instance. For information about valid IOPS
+     * values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon
+     * RDS DB instance storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be
+     * a multiple between .5 and 50 of the storage amount for the DB instance. For SQL
+     * Server DB instances, must be a multiple between 1 and 50 of the storage amount
+     * for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not applicable.
+     * Storage is managed by the DB cluster.</p>
      */
     inline int GetIops() const{ return m_iops; }
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
-     * initially allocated for the DB instance. For information about valid
-     * <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL
-     * DB instances, must be a multiple between .5 and 50 of the storage amount for the
-     * DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of
-     * the storage amount for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not
-     * applicable. Storage is managed by the DB cluster.</p>
+     * initially allocated for the DB instance. For information about valid IOPS
+     * values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon
+     * RDS DB instance storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be
+     * a multiple between .5 and 50 of the storage amount for the DB instance. For SQL
+     * Server DB instances, must be a multiple between 1 and 50 of the storage amount
+     * for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not applicable.
+     * Storage is managed by the DB cluster.</p>
      */
     inline bool IopsHasBeenSet() const { return m_iopsHasBeenSet; }
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
-     * initially allocated for the DB instance. For information about valid
-     * <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL
-     * DB instances, must be a multiple between .5 and 50 of the storage amount for the
-     * DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of
-     * the storage amount for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not
-     * applicable. Storage is managed by the DB cluster.</p>
+     * initially allocated for the DB instance. For information about valid IOPS
+     * values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon
+     * RDS DB instance storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be
+     * a multiple between .5 and 50 of the storage amount for the DB instance. For SQL
+     * Server DB instances, must be a multiple between 1 and 50 of the storage amount
+     * for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not applicable.
+     * Storage is managed by the DB cluster.</p>
      */
     inline void SetIops(int value) { m_iopsHasBeenSet = true; m_iops = value; }
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
-     * initially allocated for the DB instance. For information about valid
-     * <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL
-     * DB instances, must be a multiple between .5 and 50 of the storage amount for the
-     * DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of
-     * the storage amount for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not
-     * applicable. Storage is managed by the DB cluster.</p>
+     * initially allocated for the DB instance. For information about valid IOPS
+     * values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon
+     * RDS DB instance storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be
+     * a multiple between .5 and 50 of the storage amount for the DB instance. For SQL
+     * Server DB instances, must be a multiple between 1 and 50 of the storage amount
+     * for the DB instance.</p> <p> <b>Amazon Aurora</b> </p> <p>Not applicable.
+     * Storage is managed by the DB cluster.</p>
      */
     inline CreateDBInstanceRequest& WithIops(int value) { SetIops(value); return *this;}
 
@@ -2803,81 +2803,89 @@ namespace Model
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline const Aws::String& GetStorageType() const{ return m_storageType; }
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline bool StorageTypeHasBeenSet() const { return m_storageTypeHasBeenSet; }
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline void SetStorageType(const Aws::String& value) { m_storageTypeHasBeenSet = true; m_storageType = value; }
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline void SetStorageType(Aws::String&& value) { m_storageTypeHasBeenSet = true; m_storageType = std::move(value); }
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline void SetStorageType(const char* value) { m_storageTypeHasBeenSet = true; m_storageType.assign(value); }
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline CreateDBInstanceRequest& WithStorageType(const Aws::String& value) { SetStorageType(value); return *this;}
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline CreateDBInstanceRequest& WithStorageType(Aws::String&& value) { SetStorageType(std::move(value)); return *this;}
 
     /**
      * <p>Specifies the storage type to be associated with the DB instance.</p>
-     * <p>Valid values: <code>standard | gp2 | io1</code> </p> <p>If you specify
-     * <code>io1</code>, you must also include a value for the <code>Iops</code>
-     * parameter.</p> <p>Default: <code>io1</code> if the <code>Iops</code> parameter
-     * is specified, otherwise <code>gp2</code> </p> <p> <b>Amazon Aurora</b> </p>
-     * <p>Not applicable. Storage is managed by the DB cluster.</p>
+     * <p>Valid values: <code>gp2 | gp3 | io1 | standard</code> </p> <p>If you specify
+     * <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.</p> <p>Default: <code>io1</code> if the
+     * <code>Iops</code> parameter is specified, otherwise <code>gp2</code> </p> <p>
+     * <b>Amazon Aurora</b> </p> <p>Not applicable. Storage is managed by the DB
+     * cluster.</p>
      */
     inline CreateDBInstanceRequest& WithStorageType(const char* value) { SetStorageType(value); return *this;}
 
@@ -4573,160 +4581,188 @@ namespace Model
      */
     inline CreateDBInstanceRequest& WithNetworkType(const char* value) { SetNetworkType(value); return *this;}
 
+
+    /**
+     * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
+     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     */
+    inline int GetStorageThroughput() const{ return m_storageThroughput; }
+
+    /**
+     * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
+     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     */
+    inline bool StorageThroughputHasBeenSet() const { return m_storageThroughputHasBeenSet; }
+
+    /**
+     * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
+     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     */
+    inline void SetStorageThroughput(int value) { m_storageThroughputHasBeenSet = true; m_storageThroughput = value; }
+
+    /**
+     * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
+     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     */
+    inline CreateDBInstanceRequest& WithStorageThroughput(int value) { SetStorageThroughput(value); return *this;}
+
   private:
 
     Aws::String m_dBName;
-    bool m_dBNameHasBeenSet;
+    bool m_dBNameHasBeenSet = false;
 
     Aws::String m_dBInstanceIdentifier;
-    bool m_dBInstanceIdentifierHasBeenSet;
+    bool m_dBInstanceIdentifierHasBeenSet = false;
 
     int m_allocatedStorage;
-    bool m_allocatedStorageHasBeenSet;
+    bool m_allocatedStorageHasBeenSet = false;
 
     Aws::String m_dBInstanceClass;
-    bool m_dBInstanceClassHasBeenSet;
+    bool m_dBInstanceClassHasBeenSet = false;
 
     Aws::String m_engine;
-    bool m_engineHasBeenSet;
+    bool m_engineHasBeenSet = false;
 
     Aws::String m_masterUsername;
-    bool m_masterUsernameHasBeenSet;
+    bool m_masterUsernameHasBeenSet = false;
 
     Aws::String m_masterUserPassword;
-    bool m_masterUserPasswordHasBeenSet;
+    bool m_masterUserPasswordHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_dBSecurityGroups;
-    bool m_dBSecurityGroupsHasBeenSet;
+    bool m_dBSecurityGroupsHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_vpcSecurityGroupIds;
-    bool m_vpcSecurityGroupIdsHasBeenSet;
+    bool m_vpcSecurityGroupIdsHasBeenSet = false;
 
     Aws::String m_availabilityZone;
-    bool m_availabilityZoneHasBeenSet;
+    bool m_availabilityZoneHasBeenSet = false;
 
     Aws::String m_dBSubnetGroupName;
-    bool m_dBSubnetGroupNameHasBeenSet;
+    bool m_dBSubnetGroupNameHasBeenSet = false;
 
     Aws::String m_preferredMaintenanceWindow;
-    bool m_preferredMaintenanceWindowHasBeenSet;
+    bool m_preferredMaintenanceWindowHasBeenSet = false;
 
     Aws::String m_dBParameterGroupName;
-    bool m_dBParameterGroupNameHasBeenSet;
+    bool m_dBParameterGroupNameHasBeenSet = false;
 
     int m_backupRetentionPeriod;
-    bool m_backupRetentionPeriodHasBeenSet;
+    bool m_backupRetentionPeriodHasBeenSet = false;
 
     Aws::String m_preferredBackupWindow;
-    bool m_preferredBackupWindowHasBeenSet;
+    bool m_preferredBackupWindowHasBeenSet = false;
 
     int m_port;
-    bool m_portHasBeenSet;
+    bool m_portHasBeenSet = false;
 
     bool m_multiAZ;
-    bool m_multiAZHasBeenSet;
+    bool m_multiAZHasBeenSet = false;
 
     Aws::String m_engineVersion;
-    bool m_engineVersionHasBeenSet;
+    bool m_engineVersionHasBeenSet = false;
 
     bool m_autoMinorVersionUpgrade;
-    bool m_autoMinorVersionUpgradeHasBeenSet;
+    bool m_autoMinorVersionUpgradeHasBeenSet = false;
 
     Aws::String m_licenseModel;
-    bool m_licenseModelHasBeenSet;
+    bool m_licenseModelHasBeenSet = false;
 
     int m_iops;
-    bool m_iopsHasBeenSet;
+    bool m_iopsHasBeenSet = false;
 
     Aws::String m_optionGroupName;
-    bool m_optionGroupNameHasBeenSet;
+    bool m_optionGroupNameHasBeenSet = false;
 
     Aws::String m_characterSetName;
-    bool m_characterSetNameHasBeenSet;
+    bool m_characterSetNameHasBeenSet = false;
 
     Aws::String m_ncharCharacterSetName;
-    bool m_ncharCharacterSetNameHasBeenSet;
+    bool m_ncharCharacterSetNameHasBeenSet = false;
 
     bool m_publiclyAccessible;
-    bool m_publiclyAccessibleHasBeenSet;
+    bool m_publiclyAccessibleHasBeenSet = false;
 
     Aws::Vector<Tag> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
 
     Aws::String m_dBClusterIdentifier;
-    bool m_dBClusterIdentifierHasBeenSet;
+    bool m_dBClusterIdentifierHasBeenSet = false;
 
     Aws::String m_storageType;
-    bool m_storageTypeHasBeenSet;
+    bool m_storageTypeHasBeenSet = false;
 
     Aws::String m_tdeCredentialArn;
-    bool m_tdeCredentialArnHasBeenSet;
+    bool m_tdeCredentialArnHasBeenSet = false;
 
     Aws::String m_tdeCredentialPassword;
-    bool m_tdeCredentialPasswordHasBeenSet;
+    bool m_tdeCredentialPasswordHasBeenSet = false;
 
     bool m_storageEncrypted;
-    bool m_storageEncryptedHasBeenSet;
+    bool m_storageEncryptedHasBeenSet = false;
 
     Aws::String m_kmsKeyId;
-    bool m_kmsKeyIdHasBeenSet;
+    bool m_kmsKeyIdHasBeenSet = false;
 
     Aws::String m_domain;
-    bool m_domainHasBeenSet;
+    bool m_domainHasBeenSet = false;
 
     bool m_copyTagsToSnapshot;
-    bool m_copyTagsToSnapshotHasBeenSet;
+    bool m_copyTagsToSnapshotHasBeenSet = false;
 
     int m_monitoringInterval;
-    bool m_monitoringIntervalHasBeenSet;
+    bool m_monitoringIntervalHasBeenSet = false;
 
     Aws::String m_monitoringRoleArn;
-    bool m_monitoringRoleArnHasBeenSet;
+    bool m_monitoringRoleArnHasBeenSet = false;
 
     Aws::String m_domainIAMRoleName;
-    bool m_domainIAMRoleNameHasBeenSet;
+    bool m_domainIAMRoleNameHasBeenSet = false;
 
     int m_promotionTier;
-    bool m_promotionTierHasBeenSet;
+    bool m_promotionTierHasBeenSet = false;
 
     Aws::String m_timezone;
-    bool m_timezoneHasBeenSet;
+    bool m_timezoneHasBeenSet = false;
 
     bool m_enableIAMDatabaseAuthentication;
-    bool m_enableIAMDatabaseAuthenticationHasBeenSet;
+    bool m_enableIAMDatabaseAuthenticationHasBeenSet = false;
 
     bool m_enablePerformanceInsights;
-    bool m_enablePerformanceInsightsHasBeenSet;
+    bool m_enablePerformanceInsightsHasBeenSet = false;
 
     Aws::String m_performanceInsightsKMSKeyId;
-    bool m_performanceInsightsKMSKeyIdHasBeenSet;
+    bool m_performanceInsightsKMSKeyIdHasBeenSet = false;
 
     int m_performanceInsightsRetentionPeriod;
-    bool m_performanceInsightsRetentionPeriodHasBeenSet;
+    bool m_performanceInsightsRetentionPeriodHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_enableCloudwatchLogsExports;
-    bool m_enableCloudwatchLogsExportsHasBeenSet;
+    bool m_enableCloudwatchLogsExportsHasBeenSet = false;
 
     Aws::Vector<ProcessorFeature> m_processorFeatures;
-    bool m_processorFeaturesHasBeenSet;
+    bool m_processorFeaturesHasBeenSet = false;
 
     bool m_deletionProtection;
-    bool m_deletionProtectionHasBeenSet;
+    bool m_deletionProtectionHasBeenSet = false;
 
     int m_maxAllocatedStorage;
-    bool m_maxAllocatedStorageHasBeenSet;
+    bool m_maxAllocatedStorageHasBeenSet = false;
 
     bool m_enableCustomerOwnedIp;
-    bool m_enableCustomerOwnedIpHasBeenSet;
+    bool m_enableCustomerOwnedIpHasBeenSet = false;
 
     Aws::String m_customIamInstanceProfile;
-    bool m_customIamInstanceProfileHasBeenSet;
+    bool m_customIamInstanceProfileHasBeenSet = false;
 
     Aws::String m_backupTarget;
-    bool m_backupTargetHasBeenSet;
+    bool m_backupTargetHasBeenSet = false;
 
     Aws::String m_networkType;
-    bool m_networkTypeHasBeenSet;
+    bool m_networkTypeHasBeenSet = false;
+
+    int m_storageThroughput;
+    bool m_storageThroughputHasBeenSet = false;
   };
 
 } // namespace Model

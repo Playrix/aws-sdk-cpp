@@ -118,7 +118,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline const Aws::String& GetPattern() const{ return m_pattern; }
@@ -126,7 +126,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline bool PatternHasBeenSet() const { return m_patternHasBeenSet; }
@@ -134,7 +134,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline void SetPattern(const Aws::String& value) { m_patternHasBeenSet = true; m_pattern = value; }
@@ -142,7 +142,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline void SetPattern(Aws::String&& value) { m_patternHasBeenSet = true; m_pattern = std::move(value); }
@@ -150,7 +150,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline void SetPattern(const char* value) { m_patternHasBeenSet = true; m_pattern.assign(value); }
@@ -158,7 +158,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline CreateSegmentRequest& WithPattern(const Aws::String& value) { SetPattern(value); return *this;}
@@ -166,7 +166,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline CreateSegmentRequest& WithPattern(Aws::String&& value) { SetPattern(std::move(value)); return *this;}
@@ -174,7 +174,7 @@ namespace Model
     /**
      * <p>The pattern to use for the segment. For more information about pattern
      * syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html">
      * Segment rule pattern syntax</a>.</p>
      */
     inline CreateSegmentRequest& WithPattern(const char* value) { SetPattern(value); return *this;}
@@ -352,16 +352,16 @@ namespace Model
   private:
 
     Aws::String m_description;
-    bool m_descriptionHasBeenSet;
+    bool m_descriptionHasBeenSet = false;
 
     Aws::String m_name;
-    bool m_nameHasBeenSet;
+    bool m_nameHasBeenSet = false;
 
     Aws::String m_pattern;
-    bool m_patternHasBeenSet;
+    bool m_patternHasBeenSet = false;
 
     Aws::Map<Aws::String, Aws::String> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
   };
 
 } // namespace Model

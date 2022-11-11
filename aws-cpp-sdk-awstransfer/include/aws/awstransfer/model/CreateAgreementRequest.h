@@ -212,56 +212,56 @@ namespace Model
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline const Aws::String& GetBaseDirectory() const{ return m_baseDirectory; }
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline bool BaseDirectoryHasBeenSet() const { return m_baseDirectoryHasBeenSet; }
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline void SetBaseDirectory(const Aws::String& value) { m_baseDirectoryHasBeenSet = true; m_baseDirectory = value; }
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline void SetBaseDirectory(Aws::String&& value) { m_baseDirectoryHasBeenSet = true; m_baseDirectory = std::move(value); }
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline void SetBaseDirectory(const char* value) { m_baseDirectoryHasBeenSet = true; m_baseDirectory.assign(value); }
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline CreateAgreementRequest& WithBaseDirectory(const Aws::String& value) { SetBaseDirectory(value); return *this;}
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline CreateAgreementRequest& WithBaseDirectory(Aws::String&& value) { SetBaseDirectory(std::move(value)); return *this;}
 
     /**
      * <p>The landing directory (folder) for files transferred by using the AS2
      * protocol.</p> <p>A <code>BaseDirectory</code> example is
-     * <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.</p>
+     * <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.</p>
      */
     inline CreateAgreementRequest& WithBaseDirectory(const char* value) { SetBaseDirectory(value); return *this;}
 
@@ -467,28 +467,28 @@ namespace Model
   private:
 
     Aws::String m_description;
-    bool m_descriptionHasBeenSet;
+    bool m_descriptionHasBeenSet = false;
 
     Aws::String m_serverId;
-    bool m_serverIdHasBeenSet;
+    bool m_serverIdHasBeenSet = false;
 
     Aws::String m_localProfileId;
-    bool m_localProfileIdHasBeenSet;
+    bool m_localProfileIdHasBeenSet = false;
 
     Aws::String m_partnerProfileId;
-    bool m_partnerProfileIdHasBeenSet;
+    bool m_partnerProfileIdHasBeenSet = false;
 
     Aws::String m_baseDirectory;
-    bool m_baseDirectoryHasBeenSet;
+    bool m_baseDirectoryHasBeenSet = false;
 
     Aws::String m_accessRole;
-    bool m_accessRoleHasBeenSet;
+    bool m_accessRoleHasBeenSet = false;
 
     AgreementStatusType m_status;
-    bool m_statusHasBeenSet;
+    bool m_statusHasBeenSet = false;
 
     Aws::Vector<Tag> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
   };
 
 } // namespace Model

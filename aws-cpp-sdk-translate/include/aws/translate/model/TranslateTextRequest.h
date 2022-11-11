@@ -151,9 +151,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -166,9 +167,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -181,9 +183,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -196,9 +199,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -211,9 +215,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -226,9 +231,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -241,9 +247,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -256,9 +263,10 @@ namespace Model
 
     /**
      * <p>The language code for the language of the source text. The language must be a
-     * language supported by Amazon Translate. For a list of language codes, see
-     * <a>what-is-languages</a>.</p> <p>To have Amazon Translate determine the source
-     * language of your text, you can specify <code>auto</code> in the
+     * language supported by Amazon Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     * languages</a>.</p> <p>To have Amazon Translate determine the source language of
+     * your text, you can specify <code>auto</code> in the
      * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon
      * Translate will call <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-general.html">Amazon
@@ -364,19 +372,19 @@ namespace Model
   private:
 
     Aws::String m_text;
-    bool m_textHasBeenSet;
+    bool m_textHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_terminologyNames;
-    bool m_terminologyNamesHasBeenSet;
+    bool m_terminologyNamesHasBeenSet = false;
 
     Aws::String m_sourceLanguageCode;
-    bool m_sourceLanguageCodeHasBeenSet;
+    bool m_sourceLanguageCodeHasBeenSet = false;
 
     Aws::String m_targetLanguageCode;
-    bool m_targetLanguageCodeHasBeenSet;
+    bool m_targetLanguageCodeHasBeenSet = false;
 
     TranslationSettings m_settings;
-    bool m_settingsHasBeenSet;
+    bool m_settingsHasBeenSet = false;
   };
 
 } // namespace Model

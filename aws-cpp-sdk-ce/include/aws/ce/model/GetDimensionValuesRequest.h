@@ -145,6 +145,9 @@ namespace Model
     /**
      * <p>The name of the dimension. Each <code>Dimension</code> is available for a
      * different <code>Context</code>. For more information, see <code>Context</code>.
+     * <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only be used in
+     * <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html">CostCategoryRule</a>.
      * </p>
      */
     inline const Dimension& GetDimension() const{ return m_dimension; }
@@ -152,6 +155,9 @@ namespace Model
     /**
      * <p>The name of the dimension. Each <code>Dimension</code> is available for a
      * different <code>Context</code>. For more information, see <code>Context</code>.
+     * <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only be used in
+     * <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html">CostCategoryRule</a>.
      * </p>
      */
     inline bool DimensionHasBeenSet() const { return m_dimensionHasBeenSet; }
@@ -159,6 +165,9 @@ namespace Model
     /**
      * <p>The name of the dimension. Each <code>Dimension</code> is available for a
      * different <code>Context</code>. For more information, see <code>Context</code>.
+     * <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only be used in
+     * <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html">CostCategoryRule</a>.
      * </p>
      */
     inline void SetDimension(const Dimension& value) { m_dimensionHasBeenSet = true; m_dimension = value; }
@@ -166,6 +175,9 @@ namespace Model
     /**
      * <p>The name of the dimension. Each <code>Dimension</code> is available for a
      * different <code>Context</code>. For more information, see <code>Context</code>.
+     * <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only be used in
+     * <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html">CostCategoryRule</a>.
      * </p>
      */
     inline void SetDimension(Dimension&& value) { m_dimensionHasBeenSet = true; m_dimension = std::move(value); }
@@ -173,6 +185,9 @@ namespace Model
     /**
      * <p>The name of the dimension. Each <code>Dimension</code> is available for a
      * different <code>Context</code>. For more information, see <code>Context</code>.
+     * <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only be used in
+     * <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html">CostCategoryRule</a>.
      * </p>
      */
     inline GetDimensionValuesRequest& WithDimension(const Dimension& value) { SetDimension(value); return *this;}
@@ -180,6 +195,9 @@ namespace Model
     /**
      * <p>The name of the dimension. Each <code>Dimension</code> is available for a
      * different <code>Context</code>. For more information, see <code>Context</code>.
+     * <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only be used in
+     * <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html">CostCategoryRule</a>.
      * </p>
      */
     inline GetDimensionValuesRequest& WithDimension(Dimension&& value) { SetDimension(std::move(value)); return *this;}
@@ -946,28 +964,28 @@ namespace Model
   private:
 
     Aws::String m_searchString;
-    bool m_searchStringHasBeenSet;
+    bool m_searchStringHasBeenSet = false;
 
     DateInterval m_timePeriod;
-    bool m_timePeriodHasBeenSet;
+    bool m_timePeriodHasBeenSet = false;
 
     Dimension m_dimension;
-    bool m_dimensionHasBeenSet;
+    bool m_dimensionHasBeenSet = false;
 
     Context m_context;
-    bool m_contextHasBeenSet;
+    bool m_contextHasBeenSet = false;
 
     Expression m_filter;
-    bool m_filterHasBeenSet;
+    bool m_filterHasBeenSet = false;
 
     Aws::Vector<SortDefinition> m_sortBy;
-    bool m_sortByHasBeenSet;
+    bool m_sortByHasBeenSet = false;
 
     int m_maxResults;
-    bool m_maxResultsHasBeenSet;
+    bool m_maxResultsHasBeenSet = false;
 
     Aws::String m_nextPageToken;
-    bool m_nextPageTokenHasBeenSet;
+    bool m_nextPageTokenHasBeenSet = false;
   };
 
 } // namespace Model

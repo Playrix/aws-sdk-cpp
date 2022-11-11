@@ -1687,8 +1687,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1698,8 +1698,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1709,8 +1709,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1720,8 +1720,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1731,8 +1731,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1742,8 +1742,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1753,8 +1753,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1764,8 +1764,8 @@ namespace Model
 
     /**
      * <p>The compute and memory capacity of each DB instance in the Multi-AZ DB
-     * cluster, for example db.m6g.xlarge. Not all DB instance classes are available in
-     * all Amazon Web Services Regions, or for all database engines.</p> <p>For the
+     * cluster, for example db.m6gd.xlarge. Not all DB instance classes are available
+     * in all Amazon Web Services Regions, or for all database engines.</p> <p>For the
      * full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">
      * DB Instance Class</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for:
@@ -1871,48 +1871,44 @@ namespace Model
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
      * initially allocated for each DB instance in the Multi-AZ DB cluster.</p> <p>For
-     * information about valid Iops values, see <a
+     * information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: Must be a multiple between .5 and 50 of the
-     * storage amount for the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters
-     * only</p>
+     * RDS Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: Must be a multiple between .5 and 50 of the storage amount for
+     * the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters only</p>
      */
     inline int GetIops() const{ return m_iops; }
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
      * initially allocated for each DB instance in the Multi-AZ DB cluster.</p> <p>For
-     * information about valid Iops values, see <a
+     * information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: Must be a multiple between .5 and 50 of the
-     * storage amount for the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters
-     * only</p>
+     * RDS Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: Must be a multiple between .5 and 50 of the storage amount for
+     * the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters only</p>
      */
     inline bool IopsHasBeenSet() const { return m_iopsHasBeenSet; }
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
      * initially allocated for each DB instance in the Multi-AZ DB cluster.</p> <p>For
-     * information about valid Iops values, see <a
+     * information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: Must be a multiple between .5 and 50 of the
-     * storage amount for the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters
-     * only</p>
+     * RDS Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: Must be a multiple between .5 and 50 of the storage amount for
+     * the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters only</p>
      */
     inline void SetIops(int value) { m_iopsHasBeenSet = true; m_iops = value; }
 
     /**
      * <p>The amount of Provisioned IOPS (input/output operations per second) to be
      * initially allocated for each DB instance in the Multi-AZ DB cluster.</p> <p>For
-     * information about valid Iops values, see <a
+     * information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
-     * RDS Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS
-     * User Guide</i>.</p> <p>Constraints: Must be a multiple between .5 and 50 of the
-     * storage amount for the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters
-     * only</p>
+     * RDS Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.</p>
+     * <p>Constraints: Must be a multiple between .5 and 50 of the storage amount for
+     * the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters only</p>
      */
     inline ModifyDBClusterRequest& WithIops(int value) { SetIops(value); return *this;}
 
@@ -2397,112 +2393,112 @@ namespace Model
   private:
 
     Aws::String m_dBClusterIdentifier;
-    bool m_dBClusterIdentifierHasBeenSet;
+    bool m_dBClusterIdentifierHasBeenSet = false;
 
     Aws::String m_newDBClusterIdentifier;
-    bool m_newDBClusterIdentifierHasBeenSet;
+    bool m_newDBClusterIdentifierHasBeenSet = false;
 
     bool m_applyImmediately;
-    bool m_applyImmediatelyHasBeenSet;
+    bool m_applyImmediatelyHasBeenSet = false;
 
     int m_backupRetentionPeriod;
-    bool m_backupRetentionPeriodHasBeenSet;
+    bool m_backupRetentionPeriodHasBeenSet = false;
 
     Aws::String m_dBClusterParameterGroupName;
-    bool m_dBClusterParameterGroupNameHasBeenSet;
+    bool m_dBClusterParameterGroupNameHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_vpcSecurityGroupIds;
-    bool m_vpcSecurityGroupIdsHasBeenSet;
+    bool m_vpcSecurityGroupIdsHasBeenSet = false;
 
     int m_port;
-    bool m_portHasBeenSet;
+    bool m_portHasBeenSet = false;
 
     Aws::String m_masterUserPassword;
-    bool m_masterUserPasswordHasBeenSet;
+    bool m_masterUserPasswordHasBeenSet = false;
 
     Aws::String m_optionGroupName;
-    bool m_optionGroupNameHasBeenSet;
+    bool m_optionGroupNameHasBeenSet = false;
 
     Aws::String m_preferredBackupWindow;
-    bool m_preferredBackupWindowHasBeenSet;
+    bool m_preferredBackupWindowHasBeenSet = false;
 
     Aws::String m_preferredMaintenanceWindow;
-    bool m_preferredMaintenanceWindowHasBeenSet;
+    bool m_preferredMaintenanceWindowHasBeenSet = false;
 
     bool m_enableIAMDatabaseAuthentication;
-    bool m_enableIAMDatabaseAuthenticationHasBeenSet;
+    bool m_enableIAMDatabaseAuthenticationHasBeenSet = false;
 
     long long m_backtrackWindow;
-    bool m_backtrackWindowHasBeenSet;
+    bool m_backtrackWindowHasBeenSet = false;
 
     CloudwatchLogsExportConfiguration m_cloudwatchLogsExportConfiguration;
-    bool m_cloudwatchLogsExportConfigurationHasBeenSet;
+    bool m_cloudwatchLogsExportConfigurationHasBeenSet = false;
 
     Aws::String m_engineVersion;
-    bool m_engineVersionHasBeenSet;
+    bool m_engineVersionHasBeenSet = false;
 
     bool m_allowMajorVersionUpgrade;
-    bool m_allowMajorVersionUpgradeHasBeenSet;
+    bool m_allowMajorVersionUpgradeHasBeenSet = false;
 
     Aws::String m_dBInstanceParameterGroupName;
-    bool m_dBInstanceParameterGroupNameHasBeenSet;
+    bool m_dBInstanceParameterGroupNameHasBeenSet = false;
 
     Aws::String m_domain;
-    bool m_domainHasBeenSet;
+    bool m_domainHasBeenSet = false;
 
     Aws::String m_domainIAMRoleName;
-    bool m_domainIAMRoleNameHasBeenSet;
+    bool m_domainIAMRoleNameHasBeenSet = false;
 
     ScalingConfiguration m_scalingConfiguration;
-    bool m_scalingConfigurationHasBeenSet;
+    bool m_scalingConfigurationHasBeenSet = false;
 
     bool m_deletionProtection;
-    bool m_deletionProtectionHasBeenSet;
+    bool m_deletionProtectionHasBeenSet = false;
 
     bool m_enableHttpEndpoint;
-    bool m_enableHttpEndpointHasBeenSet;
+    bool m_enableHttpEndpointHasBeenSet = false;
 
     bool m_copyTagsToSnapshot;
-    bool m_copyTagsToSnapshotHasBeenSet;
+    bool m_copyTagsToSnapshotHasBeenSet = false;
 
     bool m_enableGlobalWriteForwarding;
-    bool m_enableGlobalWriteForwardingHasBeenSet;
+    bool m_enableGlobalWriteForwardingHasBeenSet = false;
 
     Aws::String m_dBClusterInstanceClass;
-    bool m_dBClusterInstanceClassHasBeenSet;
+    bool m_dBClusterInstanceClassHasBeenSet = false;
 
     int m_allocatedStorage;
-    bool m_allocatedStorageHasBeenSet;
+    bool m_allocatedStorageHasBeenSet = false;
 
     Aws::String m_storageType;
-    bool m_storageTypeHasBeenSet;
+    bool m_storageTypeHasBeenSet = false;
 
     int m_iops;
-    bool m_iopsHasBeenSet;
+    bool m_iopsHasBeenSet = false;
 
     bool m_autoMinorVersionUpgrade;
-    bool m_autoMinorVersionUpgradeHasBeenSet;
+    bool m_autoMinorVersionUpgradeHasBeenSet = false;
 
     int m_monitoringInterval;
-    bool m_monitoringIntervalHasBeenSet;
+    bool m_monitoringIntervalHasBeenSet = false;
 
     Aws::String m_monitoringRoleArn;
-    bool m_monitoringRoleArnHasBeenSet;
+    bool m_monitoringRoleArnHasBeenSet = false;
 
     bool m_enablePerformanceInsights;
-    bool m_enablePerformanceInsightsHasBeenSet;
+    bool m_enablePerformanceInsightsHasBeenSet = false;
 
     Aws::String m_performanceInsightsKMSKeyId;
-    bool m_performanceInsightsKMSKeyIdHasBeenSet;
+    bool m_performanceInsightsKMSKeyIdHasBeenSet = false;
 
     int m_performanceInsightsRetentionPeriod;
-    bool m_performanceInsightsRetentionPeriodHasBeenSet;
+    bool m_performanceInsightsRetentionPeriodHasBeenSet = false;
 
     ServerlessV2ScalingConfiguration m_serverlessV2ScalingConfiguration;
-    bool m_serverlessV2ScalingConfigurationHasBeenSet;
+    bool m_serverlessV2ScalingConfigurationHasBeenSet = false;
 
     Aws::String m_networkType;
-    bool m_networkTypeHasBeenSet;
+    bool m_networkTypeHasBeenSet = false;
   };
 
 } // namespace Model

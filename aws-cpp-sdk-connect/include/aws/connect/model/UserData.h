@@ -45,38 +45,38 @@ namespace Model
 
 
     /**
-     * <p>Information about the user for the data that is returned. It contains
-     * resourceId and ARN of the user. </p>
+     * <p>Information about the user for the data that is returned. It contains the
+     * <code>resourceId</code> and ARN of the user. </p>
      */
     inline const UserReference& GetUser() const{ return m_user; }
 
     /**
-     * <p>Information about the user for the data that is returned. It contains
-     * resourceId and ARN of the user. </p>
+     * <p>Information about the user for the data that is returned. It contains the
+     * <code>resourceId</code> and ARN of the user. </p>
      */
     inline bool UserHasBeenSet() const { return m_userHasBeenSet; }
 
     /**
-     * <p>Information about the user for the data that is returned. It contains
-     * resourceId and ARN of the user. </p>
+     * <p>Information about the user for the data that is returned. It contains the
+     * <code>resourceId</code> and ARN of the user. </p>
      */
     inline void SetUser(const UserReference& value) { m_userHasBeenSet = true; m_user = value; }
 
     /**
-     * <p>Information about the user for the data that is returned. It contains
-     * resourceId and ARN of the user. </p>
+     * <p>Information about the user for the data that is returned. It contains the
+     * <code>resourceId</code> and ARN of the user. </p>
      */
     inline void SetUser(UserReference&& value) { m_userHasBeenSet = true; m_user = std::move(value); }
 
     /**
-     * <p>Information about the user for the data that is returned. It contains
-     * resourceId and ARN of the user. </p>
+     * <p>Information about the user for the data that is returned. It contains the
+     * <code>resourceId</code> and ARN of the user. </p>
      */
     inline UserData& WithUser(const UserReference& value) { SetUser(value); return *this;}
 
     /**
-     * <p>Information about the user for the data that is returned. It contains
-     * resourceId and ARN of the user. </p>
+     * <p>Information about the user for the data that is returned. It contains the
+     * <code>resourceId</code> and ARN of the user. </p>
      */
     inline UserData& WithUser(UserReference&& value) { SetUser(std::move(value)); return *this;}
 
@@ -245,7 +245,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline const Aws::Map<Channel, int>& GetMaxSlotsByChannel() const{ return m_maxSlotsByChannel; }
 
@@ -253,7 +253,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline bool MaxSlotsByChannelHasBeenSet() const { return m_maxSlotsByChannelHasBeenSet; }
 
@@ -261,7 +261,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline void SetMaxSlotsByChannel(const Aws::Map<Channel, int>& value) { m_maxSlotsByChannelHasBeenSet = true; m_maxSlotsByChannel = value; }
 
@@ -269,7 +269,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline void SetMaxSlotsByChannel(Aws::Map<Channel, int>&& value) { m_maxSlotsByChannelHasBeenSet = true; m_maxSlotsByChannel = std::move(value); }
 
@@ -277,7 +277,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline UserData& WithMaxSlotsByChannel(const Aws::Map<Channel, int>& value) { SetMaxSlotsByChannel(value); return *this;}
 
@@ -285,7 +285,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline UserData& WithMaxSlotsByChannel(Aws::Map<Channel, int>&& value) { SetMaxSlotsByChannel(std::move(value)); return *this;}
 
@@ -293,7 +293,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline UserData& AddMaxSlotsByChannel(const Channel& key, int value) { m_maxSlotsByChannelHasBeenSet = true; m_maxSlotsByChannel.emplace(key, value); return *this; }
 
@@ -301,7 +301,7 @@ namespace Model
      * <p>A map of maximum slots by channel. The key is a channel name. The value is an
      * integer: the maximum number of slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a>
-     * of the RoutingProfile assigned to the agent. </p>
+     * of the <code>RoutingProfile</code> assigned to the agent. </p>
      */
     inline UserData& AddMaxSlotsByChannel(Channel&& key, int value) { m_maxSlotsByChannelHasBeenSet = true; m_maxSlotsByChannel.emplace(std::move(key), value); return *this; }
 
@@ -398,28 +398,28 @@ namespace Model
   private:
 
     UserReference m_user;
-    bool m_userHasBeenSet;
+    bool m_userHasBeenSet = false;
 
     RoutingProfileReference m_routingProfile;
-    bool m_routingProfileHasBeenSet;
+    bool m_routingProfileHasBeenSet = false;
 
     HierarchyPathReference m_hierarchyPath;
-    bool m_hierarchyPathHasBeenSet;
+    bool m_hierarchyPathHasBeenSet = false;
 
     AgentStatusReference m_status;
-    bool m_statusHasBeenSet;
+    bool m_statusHasBeenSet = false;
 
     Aws::Map<Channel, int> m_availableSlotsByChannel;
-    bool m_availableSlotsByChannelHasBeenSet;
+    bool m_availableSlotsByChannelHasBeenSet = false;
 
     Aws::Map<Channel, int> m_maxSlotsByChannel;
-    bool m_maxSlotsByChannelHasBeenSet;
+    bool m_maxSlotsByChannelHasBeenSet = false;
 
     Aws::Map<Channel, int> m_activeSlotsByChannel;
-    bool m_activeSlotsByChannelHasBeenSet;
+    bool m_activeSlotsByChannelHasBeenSet = false;
 
     Aws::Vector<AgentContactReference> m_contacts;
-    bool m_contactsHasBeenSet;
+    bool m_contactsHasBeenSet = false;
   };
 
 } // namespace Model

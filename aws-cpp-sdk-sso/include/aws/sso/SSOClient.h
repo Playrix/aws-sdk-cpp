@@ -5,78 +5,15 @@
 
 #pragma once
 #include <aws/sso/SSO_EXPORTS.h>
-#include <aws/sso/SSOErrors.h>
-#include <aws/core/client/AWSError.h>
 #include <aws/core/client/ClientConfiguration.h>
 #include <aws/core/client/AWSClient.h>
-#include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/core/utils/json/JsonSerializer.h>
-#include <aws/sso/model/GetRoleCredentialsResult.h>
-#include <aws/sso/model/ListAccountRolesResult.h>
-#include <aws/sso/model/ListAccountsResult.h>
-#include <aws/core/NoResult.h>
-#include <aws/core/client/AsyncCallerContext.h>
-#include <aws/core/http/HttpTypes.h>
-#include <future>
-#include <functional>
+#include <aws/sso/SSOServiceClientModel.h>
 
 namespace Aws
 {
-
-namespace Http
-{
-  class HttpClient;
-  class HttpClientFactory;
-} // namespace Http
-
-namespace Utils
-{
-  template< typename R, typename E> class Outcome;
-namespace Threading
-{
-  class Executor;
-} // namespace Threading
-} // namespace Utils
-
-namespace Auth
-{
-  class AWSCredentials;
-  class AWSCredentialsProvider;
-} // namespace Auth
-
-namespace Client
-{
-  class RetryStrategy;
-} // namespace Client
-
 namespace SSO
 {
-
-namespace Model
-{
-        class GetRoleCredentialsRequest;
-        class ListAccountRolesRequest;
-        class ListAccountsRequest;
-        class LogoutRequest;
-
-        typedef Aws::Utils::Outcome<GetRoleCredentialsResult, SSOError> GetRoleCredentialsOutcome;
-        typedef Aws::Utils::Outcome<ListAccountRolesResult, SSOError> ListAccountRolesOutcome;
-        typedef Aws::Utils::Outcome<ListAccountsResult, SSOError> ListAccountsOutcome;
-        typedef Aws::Utils::Outcome<Aws::NoResult, SSOError> LogoutOutcome;
-
-        typedef std::future<GetRoleCredentialsOutcome> GetRoleCredentialsOutcomeCallable;
-        typedef std::future<ListAccountRolesOutcome> ListAccountRolesOutcomeCallable;
-        typedef std::future<ListAccountsOutcome> ListAccountsOutcomeCallable;
-        typedef std::future<LogoutOutcome> LogoutOutcomeCallable;
-} // namespace Model
-
-  class SSOClient;
-
-    typedef std::function<void(const SSOClient*, const Model::GetRoleCredentialsRequest&, const Model::GetRoleCredentialsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetRoleCredentialsResponseReceivedHandler;
-    typedef std::function<void(const SSOClient*, const Model::ListAccountRolesRequest&, const Model::ListAccountRolesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAccountRolesResponseReceivedHandler;
-    typedef std::function<void(const SSOClient*, const Model::ListAccountsRequest&, const Model::ListAccountsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAccountsResponseReceivedHandler;
-    typedef std::function<void(const SSOClient*, const Model::LogoutRequest&, const Model::LogoutOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > LogoutResponseReceivedHandler;
-
   /**
    * <p>AWS IAM Identity Center (successor to AWS Single Sign-On) Portal is a web
    * service that makes it easy for you to assign user access to IAM Identity Center
@@ -100,27 +37,55 @@ namespace Model
   {
     public:
       typedef Aws::Client::AWSJsonClient BASECLASS;
+      static const char* SERVICE_NAME;
+      static const char* ALLOCATION_TAG;
 
        /**
         * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
-        SSOClient(const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
+        SSOClient(const Aws::SSO::SSOClientConfiguration& clientConfiguration = Aws::SSO::SSOClientConfiguration(),
+                  std::shared_ptr<SSOEndpointProviderBase> endpointProvider = Aws::MakeShared<SSOEndpointProvider>(ALLOCATION_TAG));
 
        /**
         * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
         SSOClient(const Aws::Auth::AWSCredentials& credentials,
-                  const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
+                  std::shared_ptr<SSOEndpointProviderBase> endpointProvider = Aws::MakeShared<SSOEndpointProvider>(ALLOCATION_TAG),
+                  const Aws::SSO::SSOClientConfiguration& clientConfiguration = Aws::SSO::SSOClientConfiguration());
 
        /**
         * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
         * the default http client factory will be used
         */
         SSOClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
-                  const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
+                  std::shared_ptr<SSOEndpointProviderBase> endpointProvider = Aws::MakeShared<SSOEndpointProvider>(ALLOCATION_TAG),
+                  const Aws::SSO::SSOClientConfiguration& clientConfiguration = Aws::SSO::SSOClientConfiguration());
 
+
+        /* Legacy constructors due deprecation */
+       /**
+        * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
+        * is not specified, it will be initialized to default values.
+        */
+        SSOClient(const Aws::Client::ClientConfiguration& clientConfiguration);
+
+       /**
+        * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
+        * is not specified, it will be initialized to default values.
+        */
+        SSOClient(const Aws::Auth::AWSCredentials& credentials,
+                  const Aws::Client::ClientConfiguration& clientConfiguration);
+
+       /**
+        * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
+        * the default http client factory will be used
+        */
+        SSOClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
+                  const Aws::Client::ClientConfiguration& clientConfiguration);
+
+        /* End of legacy constructors due deprecation */
         virtual ~SSOClient();
 
 
@@ -213,16 +178,13 @@ namespace Model
 
 
       void OverrideEndpoint(const Aws::String& endpoint);
+      std::shared_ptr<SSOEndpointProviderBase>& accessEndpointProvider();
     private:
-      void init(const Aws::Client::ClientConfiguration& clientConfiguration);
-        void GetRoleCredentialsAsyncHelper(const Model::GetRoleCredentialsRequest& request, const GetRoleCredentialsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
-        void ListAccountRolesAsyncHelper(const Model::ListAccountRolesRequest& request, const ListAccountRolesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
-        void ListAccountsAsyncHelper(const Model::ListAccountsRequest& request, const ListAccountsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
-        void LogoutAsyncHelper(const Model::LogoutRequest& request, const LogoutResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+      void init(const SSOClientConfiguration& clientConfiguration);
 
-      Aws::String m_uri;
-      Aws::String m_configScheme;
+      SSOClientConfiguration m_clientConfiguration;
       std::shared_ptr<Aws::Utils::Threading::Executor> m_executor;
+      std::shared_ptr<SSOEndpointProviderBase> m_endpointProvider;
   };
 
 } // namespace SSO

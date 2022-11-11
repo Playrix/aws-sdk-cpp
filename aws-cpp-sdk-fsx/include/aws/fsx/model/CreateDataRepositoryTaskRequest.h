@@ -350,25 +350,57 @@ namespace Model
     
     inline CreateDataRepositoryTaskRequest& AddTags(Tag&& value) { m_tagsHasBeenSet = true; m_tags.push_back(std::move(value)); return *this; }
 
+
+    /**
+     * <p>Specifies the amount of data to release, in GiB, by an Amazon File Cache
+     * <code>AUTO_RELEASE_DATA</code> task that automatically releases files from the
+     * cache.</p>
+     */
+    inline long long GetCapacityToRelease() const{ return m_capacityToRelease; }
+
+    /**
+     * <p>Specifies the amount of data to release, in GiB, by an Amazon File Cache
+     * <code>AUTO_RELEASE_DATA</code> task that automatically releases files from the
+     * cache.</p>
+     */
+    inline bool CapacityToReleaseHasBeenSet() const { return m_capacityToReleaseHasBeenSet; }
+
+    /**
+     * <p>Specifies the amount of data to release, in GiB, by an Amazon File Cache
+     * <code>AUTO_RELEASE_DATA</code> task that automatically releases files from the
+     * cache.</p>
+     */
+    inline void SetCapacityToRelease(long long value) { m_capacityToReleaseHasBeenSet = true; m_capacityToRelease = value; }
+
+    /**
+     * <p>Specifies the amount of data to release, in GiB, by an Amazon File Cache
+     * <code>AUTO_RELEASE_DATA</code> task that automatically releases files from the
+     * cache.</p>
+     */
+    inline CreateDataRepositoryTaskRequest& WithCapacityToRelease(long long value) { SetCapacityToRelease(value); return *this;}
+
   private:
 
     DataRepositoryTaskType m_type;
-    bool m_typeHasBeenSet;
+    bool m_typeHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_paths;
-    bool m_pathsHasBeenSet;
+    bool m_pathsHasBeenSet = false;
 
     Aws::String m_fileSystemId;
-    bool m_fileSystemIdHasBeenSet;
+    bool m_fileSystemIdHasBeenSet = false;
 
     CompletionReport m_report;
-    bool m_reportHasBeenSet;
+    bool m_reportHasBeenSet = false;
 
     Aws::String m_clientRequestToken;
-    bool m_clientRequestTokenHasBeenSet;
+    bool m_clientRequestTokenHasBeenSet = false;
 
     Aws::Vector<Tag> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
+
+    long long m_capacityToRelease;
+    bool m_capacityToReleaseHasBeenSet = false;
   };
 
 } // namespace Model

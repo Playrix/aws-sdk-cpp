@@ -114,6 +114,35 @@ namespace Model
 
 
     /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline int GetRecordingReconnectWindowSeconds() const{ return m_recordingReconnectWindowSeconds; }
+
+    /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline bool RecordingReconnectWindowSecondsHasBeenSet() const { return m_recordingReconnectWindowSecondsHasBeenSet; }
+
+    /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline void SetRecordingReconnectWindowSeconds(int value) { m_recordingReconnectWindowSecondsHasBeenSet = true; m_recordingReconnectWindowSeconds = value; }
+
+    /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline CreateRecordingConfigurationRequest& WithRecordingReconnectWindowSeconds(int value) { SetRecordingReconnectWindowSeconds(value); return *this;}
+
+
+    /**
      * <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.
      * See <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
@@ -289,16 +318,19 @@ namespace Model
   private:
 
     DestinationConfiguration m_destinationConfiguration;
-    bool m_destinationConfigurationHasBeenSet;
+    bool m_destinationConfigurationHasBeenSet = false;
 
     Aws::String m_name;
-    bool m_nameHasBeenSet;
+    bool m_nameHasBeenSet = false;
+
+    int m_recordingReconnectWindowSeconds;
+    bool m_recordingReconnectWindowSecondsHasBeenSet = false;
 
     Aws::Map<Aws::String, Aws::String> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
 
     ThumbnailConfiguration m_thumbnailConfiguration;
-    bool m_thumbnailConfigurationHasBeenSet;
+    bool m_thumbnailConfigurationHasBeenSet = false;
   };
 
 } // namespace Model

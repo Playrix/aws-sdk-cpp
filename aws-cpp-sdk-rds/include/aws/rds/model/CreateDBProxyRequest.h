@@ -118,7 +118,8 @@ namespace Model
      * which database network protocol the proxy recognizes when it interprets network
      * traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for
      * MySQL databases, specify <code>MYSQL</code>. For Aurora PostgreSQL and RDS for
-     * PostgreSQL databases, specify <code>POSTGRESQL</code>.</p>
+     * PostgreSQL databases, specify <code>POSTGRESQL</code>. For RDS for Microsoft SQL
+     * Server, specify <code>SQLSERVER</code>.</p>
      */
     inline const EngineFamily& GetEngineFamily() const{ return m_engineFamily; }
 
@@ -127,7 +128,8 @@ namespace Model
      * which database network protocol the proxy recognizes when it interprets network
      * traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for
      * MySQL databases, specify <code>MYSQL</code>. For Aurora PostgreSQL and RDS for
-     * PostgreSQL databases, specify <code>POSTGRESQL</code>.</p>
+     * PostgreSQL databases, specify <code>POSTGRESQL</code>. For RDS for Microsoft SQL
+     * Server, specify <code>SQLSERVER</code>.</p>
      */
     inline bool EngineFamilyHasBeenSet() const { return m_engineFamilyHasBeenSet; }
 
@@ -136,7 +138,8 @@ namespace Model
      * which database network protocol the proxy recognizes when it interprets network
      * traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for
      * MySQL databases, specify <code>MYSQL</code>. For Aurora PostgreSQL and RDS for
-     * PostgreSQL databases, specify <code>POSTGRESQL</code>.</p>
+     * PostgreSQL databases, specify <code>POSTGRESQL</code>. For RDS for Microsoft SQL
+     * Server, specify <code>SQLSERVER</code>.</p>
      */
     inline void SetEngineFamily(const EngineFamily& value) { m_engineFamilyHasBeenSet = true; m_engineFamily = value; }
 
@@ -145,7 +148,8 @@ namespace Model
      * which database network protocol the proxy recognizes when it interprets network
      * traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for
      * MySQL databases, specify <code>MYSQL</code>. For Aurora PostgreSQL and RDS for
-     * PostgreSQL databases, specify <code>POSTGRESQL</code>.</p>
+     * PostgreSQL databases, specify <code>POSTGRESQL</code>. For RDS for Microsoft SQL
+     * Server, specify <code>SQLSERVER</code>.</p>
      */
     inline void SetEngineFamily(EngineFamily&& value) { m_engineFamilyHasBeenSet = true; m_engineFamily = std::move(value); }
 
@@ -154,7 +158,8 @@ namespace Model
      * which database network protocol the proxy recognizes when it interprets network
      * traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for
      * MySQL databases, specify <code>MYSQL</code>. For Aurora PostgreSQL and RDS for
-     * PostgreSQL databases, specify <code>POSTGRESQL</code>.</p>
+     * PostgreSQL databases, specify <code>POSTGRESQL</code>. For RDS for Microsoft SQL
+     * Server, specify <code>SQLSERVER</code>.</p>
      */
     inline CreateDBProxyRequest& WithEngineFamily(const EngineFamily& value) { SetEngineFamily(value); return *this;}
 
@@ -163,7 +168,8 @@ namespace Model
      * which database network protocol the proxy recognizes when it interprets network
      * traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for
      * MySQL databases, specify <code>MYSQL</code>. For Aurora PostgreSQL and RDS for
-     * PostgreSQL databases, specify <code>POSTGRESQL</code>.</p>
+     * PostgreSQL databases, specify <code>POSTGRESQL</code>. For RDS for Microsoft SQL
+     * Server, specify <code>SQLSERVER</code>.</p>
      */
     inline CreateDBProxyRequest& WithEngineFamily(EngineFamily&& value) { SetEngineFamily(std::move(value)); return *this;}
 
@@ -504,34 +510,34 @@ namespace Model
   private:
 
     Aws::String m_dBProxyName;
-    bool m_dBProxyNameHasBeenSet;
+    bool m_dBProxyNameHasBeenSet = false;
 
     EngineFamily m_engineFamily;
-    bool m_engineFamilyHasBeenSet;
+    bool m_engineFamilyHasBeenSet = false;
 
     Aws::Vector<UserAuthConfig> m_auth;
-    bool m_authHasBeenSet;
+    bool m_authHasBeenSet = false;
 
     Aws::String m_roleArn;
-    bool m_roleArnHasBeenSet;
+    bool m_roleArnHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_vpcSubnetIds;
-    bool m_vpcSubnetIdsHasBeenSet;
+    bool m_vpcSubnetIdsHasBeenSet = false;
 
     Aws::Vector<Aws::String> m_vpcSecurityGroupIds;
-    bool m_vpcSecurityGroupIdsHasBeenSet;
+    bool m_vpcSecurityGroupIdsHasBeenSet = false;
 
     bool m_requireTLS;
-    bool m_requireTLSHasBeenSet;
+    bool m_requireTLSHasBeenSet = false;
 
     int m_idleClientTimeout;
-    bool m_idleClientTimeoutHasBeenSet;
+    bool m_idleClientTimeoutHasBeenSet = false;
 
     bool m_debugLogging;
-    bool m_debugLoggingHasBeenSet;
+    bool m_debugLoggingHasBeenSet = false;
 
     Aws::Vector<Tag> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
   };
 
 } // namespace Model

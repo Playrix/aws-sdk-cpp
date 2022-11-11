@@ -1295,98 +1295,122 @@ namespace Model
 
     /**
      * <p>Specifies the workflow ID for the workflow to assign and the execution role
-     * that's used for executing the workflow.</p>
+     * that's used for executing the workflow.</p> <p>In additon to a workflow to
+     * execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     * also contain a workflow ID (and execution role) for a workflow to execute on
+     * partial upload. A partial upload occurs when a file is open when the session
+     * disconnects.</p>
      */
     inline const WorkflowDetails& GetWorkflowDetails() const{ return m_workflowDetails; }
 
     /**
      * <p>Specifies the workflow ID for the workflow to assign and the execution role
-     * that's used for executing the workflow.</p>
+     * that's used for executing the workflow.</p> <p>In additon to a workflow to
+     * execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     * also contain a workflow ID (and execution role) for a workflow to execute on
+     * partial upload. A partial upload occurs when a file is open when the session
+     * disconnects.</p>
      */
     inline bool WorkflowDetailsHasBeenSet() const { return m_workflowDetailsHasBeenSet; }
 
     /**
      * <p>Specifies the workflow ID for the workflow to assign and the execution role
-     * that's used for executing the workflow.</p>
+     * that's used for executing the workflow.</p> <p>In additon to a workflow to
+     * execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     * also contain a workflow ID (and execution role) for a workflow to execute on
+     * partial upload. A partial upload occurs when a file is open when the session
+     * disconnects.</p>
      */
     inline void SetWorkflowDetails(const WorkflowDetails& value) { m_workflowDetailsHasBeenSet = true; m_workflowDetails = value; }
 
     /**
      * <p>Specifies the workflow ID for the workflow to assign and the execution role
-     * that's used for executing the workflow.</p>
+     * that's used for executing the workflow.</p> <p>In additon to a workflow to
+     * execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     * also contain a workflow ID (and execution role) for a workflow to execute on
+     * partial upload. A partial upload occurs when a file is open when the session
+     * disconnects.</p>
      */
     inline void SetWorkflowDetails(WorkflowDetails&& value) { m_workflowDetailsHasBeenSet = true; m_workflowDetails = std::move(value); }
 
     /**
      * <p>Specifies the workflow ID for the workflow to assign and the execution role
-     * that's used for executing the workflow.</p>
+     * that's used for executing the workflow.</p> <p>In additon to a workflow to
+     * execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     * also contain a workflow ID (and execution role) for a workflow to execute on
+     * partial upload. A partial upload occurs when a file is open when the session
+     * disconnects.</p>
      */
     inline DescribedServer& WithWorkflowDetails(const WorkflowDetails& value) { SetWorkflowDetails(value); return *this;}
 
     /**
      * <p>Specifies the workflow ID for the workflow to assign and the execution role
-     * that's used for executing the workflow.</p>
+     * that's used for executing the workflow.</p> <p>In additon to a workflow to
+     * execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     * also contain a workflow ID (and execution role) for a workflow to execute on
+     * partial upload. A partial upload occurs when a file is open when the session
+     * disconnects.</p>
      */
     inline DescribedServer& WithWorkflowDetails(WorkflowDetails&& value) { SetWorkflowDetails(std::move(value)); return *this;}
 
   private:
 
     Aws::String m_arn;
-    bool m_arnHasBeenSet;
+    bool m_arnHasBeenSet = false;
 
     Aws::String m_certificate;
-    bool m_certificateHasBeenSet;
+    bool m_certificateHasBeenSet = false;
 
     ProtocolDetails m_protocolDetails;
-    bool m_protocolDetailsHasBeenSet;
+    bool m_protocolDetailsHasBeenSet = false;
 
     Domain m_domain;
-    bool m_domainHasBeenSet;
+    bool m_domainHasBeenSet = false;
 
     EndpointDetails m_endpointDetails;
-    bool m_endpointDetailsHasBeenSet;
+    bool m_endpointDetailsHasBeenSet = false;
 
     EndpointType m_endpointType;
-    bool m_endpointTypeHasBeenSet;
+    bool m_endpointTypeHasBeenSet = false;
 
     Aws::String m_hostKeyFingerprint;
-    bool m_hostKeyFingerprintHasBeenSet;
+    bool m_hostKeyFingerprintHasBeenSet = false;
 
     IdentityProviderDetails m_identityProviderDetails;
-    bool m_identityProviderDetailsHasBeenSet;
+    bool m_identityProviderDetailsHasBeenSet = false;
 
     IdentityProviderType m_identityProviderType;
-    bool m_identityProviderTypeHasBeenSet;
+    bool m_identityProviderTypeHasBeenSet = false;
 
     Aws::String m_loggingRole;
-    bool m_loggingRoleHasBeenSet;
+    bool m_loggingRoleHasBeenSet = false;
 
     Aws::String m_postAuthenticationLoginBanner;
-    bool m_postAuthenticationLoginBannerHasBeenSet;
+    bool m_postAuthenticationLoginBannerHasBeenSet = false;
 
     Aws::String m_preAuthenticationLoginBanner;
-    bool m_preAuthenticationLoginBannerHasBeenSet;
+    bool m_preAuthenticationLoginBannerHasBeenSet = false;
 
     Aws::Vector<Protocol> m_protocols;
-    bool m_protocolsHasBeenSet;
+    bool m_protocolsHasBeenSet = false;
 
     Aws::String m_securityPolicyName;
-    bool m_securityPolicyNameHasBeenSet;
+    bool m_securityPolicyNameHasBeenSet = false;
 
     Aws::String m_serverId;
-    bool m_serverIdHasBeenSet;
+    bool m_serverIdHasBeenSet = false;
 
     State m_state;
-    bool m_stateHasBeenSet;
+    bool m_stateHasBeenSet = false;
 
     Aws::Vector<Tag> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
 
     int m_userCount;
-    bool m_userCountHasBeenSet;
+    bool m_userCountHasBeenSet = false;
 
     WorkflowDetails m_workflowDetails;
-    bool m_workflowDetailsHasBeenSet;
+    bool m_workflowDetailsHasBeenSet = false;
   };
 
 } // namespace Model

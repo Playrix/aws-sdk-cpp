@@ -29,8 +29,8 @@ namespace Model
    * template in the request, but not both.</p> <p>For information about launch
    * templates, see <a
    * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launch
-   * an instance from a launch template</a> in the <i>Amazon EC2 User Guide for Linux
-   * Instances</i>.</p><p><h3>See Also:</h3>   <a
+   * an instance from a launch template</a> in the <i>Amazon EC2 User
+   * Guide</i>.</p><p><h3>See Also:</h3>   <a
    * href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/FleetLaunchTemplateSpecification">AWS
    * API Reference</a></p>
    */
@@ -234,13 +234,13 @@ namespace Model
   private:
 
     Aws::String m_launchTemplateId;
-    bool m_launchTemplateIdHasBeenSet;
+    bool m_launchTemplateIdHasBeenSet = false;
 
     Aws::String m_launchTemplateName;
-    bool m_launchTemplateNameHasBeenSet;
+    bool m_launchTemplateNameHasBeenSet = false;
 
     Aws::String m_version;
-    bool m_versionHasBeenSet;
+    bool m_versionHasBeenSet = false;
   };
 
 } // namespace Model

@@ -87,7 +87,12 @@ namespace Model
     Daniel,
     Liam,
     Pedro,
-    Kajal
+    Kajal,
+    Hiujin,
+    Laura,
+    Elin,
+    Ida,
+    Suvi
   };
 
 namespace VoiceIdMapper

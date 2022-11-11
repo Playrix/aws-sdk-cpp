@@ -162,6 +162,35 @@ namespace Model
 
 
     /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline int GetRecordingReconnectWindowSeconds() const{ return m_recordingReconnectWindowSeconds; }
+
+    /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline bool RecordingReconnectWindowSecondsHasBeenSet() const { return m_recordingReconnectWindowSecondsHasBeenSet; }
+
+    /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline void SetRecordingReconnectWindowSeconds(int value) { m_recordingReconnectWindowSecondsHasBeenSet = true; m_recordingReconnectWindowSeconds = value; }
+
+    /**
+     * <p>If a broadcast disconnects and then reconnects within the specified interval,
+     * the multiple streams will be considered a single broadcast and merged together.
+     * Default: 0.</p>
+     */
+    inline RecordingConfiguration& WithRecordingReconnectWindowSeconds(int value) { SetRecordingReconnectWindowSeconds(value); return *this;}
+
+
+    /**
      * <p>Indicates the current state of the recording configuration. When the state is
      * <code>ACTIVE</code>, the configuration is ready for recording a channel
      * stream.</p>
@@ -380,22 +409,25 @@ namespace Model
   private:
 
     Aws::String m_arn;
-    bool m_arnHasBeenSet;
+    bool m_arnHasBeenSet = false;
 
     DestinationConfiguration m_destinationConfiguration;
-    bool m_destinationConfigurationHasBeenSet;
+    bool m_destinationConfigurationHasBeenSet = false;
 
     Aws::String m_name;
-    bool m_nameHasBeenSet;
+    bool m_nameHasBeenSet = false;
+
+    int m_recordingReconnectWindowSeconds;
+    bool m_recordingReconnectWindowSecondsHasBeenSet = false;
 
     RecordingConfigurationState m_state;
-    bool m_stateHasBeenSet;
+    bool m_stateHasBeenSet = false;
 
     Aws::Map<Aws::String, Aws::String> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
 
     ThumbnailConfiguration m_thumbnailConfiguration;
-    bool m_thumbnailConfigurationHasBeenSet;
+    bool m_thumbnailConfigurationHasBeenSet = false;
   };
 
 } // namespace Model

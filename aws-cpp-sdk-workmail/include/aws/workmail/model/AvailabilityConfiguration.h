@@ -116,37 +116,37 @@ namespace Model
 
     /**
      * <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains
-     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not required.</p>
      */
     inline const RedactedEwsAvailabilityProvider& GetEwsProvider() const{ return m_ewsProvider; }
 
     /**
      * <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains
-     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not required.</p>
      */
     inline bool EwsProviderHasBeenSet() const { return m_ewsProviderHasBeenSet; }
 
     /**
      * <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains
-     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not required.</p>
      */
     inline void SetEwsProvider(const RedactedEwsAvailabilityProvider& value) { m_ewsProviderHasBeenSet = true; m_ewsProvider = value; }
 
     /**
      * <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains
-     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not required.</p>
      */
     inline void SetEwsProvider(RedactedEwsAvailabilityProvider&& value) { m_ewsProviderHasBeenSet = true; m_ewsProvider = std::move(value); }
 
     /**
      * <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains
-     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not required.</p>
      */
     inline AvailabilityConfiguration& WithEwsProvider(const RedactedEwsAvailabilityProvider& value) { SetEwsProvider(value); return *this;}
 
     /**
      * <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains
-     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+     * <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not required.</p>
      */
     inline AvailabilityConfiguration& WithEwsProvider(RedactedEwsAvailabilityProvider&& value) { SetEwsProvider(std::move(value)); return *this;}
 
@@ -258,22 +258,22 @@ namespace Model
   private:
 
     Aws::String m_domainName;
-    bool m_domainNameHasBeenSet;
+    bool m_domainNameHasBeenSet = false;
 
     AvailabilityProviderType m_providerType;
-    bool m_providerTypeHasBeenSet;
+    bool m_providerTypeHasBeenSet = false;
 
     RedactedEwsAvailabilityProvider m_ewsProvider;
-    bool m_ewsProviderHasBeenSet;
+    bool m_ewsProviderHasBeenSet = false;
 
     LambdaAvailabilityProvider m_lambdaProvider;
-    bool m_lambdaProviderHasBeenSet;
+    bool m_lambdaProviderHasBeenSet = false;
 
     Aws::Utils::DateTime m_dateCreated;
-    bool m_dateCreatedHasBeenSet;
+    bool m_dateCreatedHasBeenSet = false;
 
     Aws::Utils::DateTime m_dateModified;
-    bool m_dateModifiedHasBeenSet;
+    bool m_dateModifiedHasBeenSet = false;
   };
 
 } // namespace Model

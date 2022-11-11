@@ -39,22 +39,22 @@ namespace Model
 
 
     /**
-     * <p>The ID of the fleet privisioning template version.</p>
+     * <p>The ID of the fleet provisioning template version.</p>
      */
     inline int GetVersionId() const{ return m_versionId; }
 
     /**
-     * <p>The ID of the fleet privisioning template version.</p>
+     * <p>The ID of the fleet provisioning template version.</p>
      */
     inline bool VersionIdHasBeenSet() const { return m_versionIdHasBeenSet; }
 
     /**
-     * <p>The ID of the fleet privisioning template version.</p>
+     * <p>The ID of the fleet provisioning template version.</p>
      */
     inline void SetVersionId(int value) { m_versionIdHasBeenSet = true; m_versionId = value; }
 
     /**
-     * <p>The ID of the fleet privisioning template version.</p>
+     * <p>The ID of the fleet provisioning template version.</p>
      */
     inline ProvisioningTemplateVersionSummary& WithVersionId(int value) { SetVersionId(value); return *this;}
 
@@ -117,13 +117,13 @@ namespace Model
   private:
 
     int m_versionId;
-    bool m_versionIdHasBeenSet;
+    bool m_versionIdHasBeenSet = false;
 
     Aws::Utils::DateTime m_creationDate;
-    bool m_creationDateHasBeenSet;
+    bool m_creationDateHasBeenSet = false;
 
     bool m_isDefaultVersion;
-    bool m_isDefaultVersionHasBeenSet;
+    bool m_isDefaultVersionHasBeenSet = false;
   };
 
 } // namespace Model

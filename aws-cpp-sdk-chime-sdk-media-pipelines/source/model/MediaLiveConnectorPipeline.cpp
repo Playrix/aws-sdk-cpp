@@ -47,7 +47,7 @@ MediaLiveConnectorPipeline& MediaLiveConnectorPipeline::operator =(JsonView json
 {
   if(jsonValue.ValueExists("Sources"))
   {
-    Array<JsonView> sourcesJsonList = jsonValue.GetArray("Sources");
+    Aws::Utils::Array<JsonView> sourcesJsonList = jsonValue.GetArray("Sources");
     for(unsigned sourcesIndex = 0; sourcesIndex < sourcesJsonList.GetLength(); ++sourcesIndex)
     {
       m_sources.push_back(sourcesJsonList[sourcesIndex].AsObject());
@@ -57,7 +57,7 @@ MediaLiveConnectorPipeline& MediaLiveConnectorPipeline::operator =(JsonView json
 
   if(jsonValue.ValueExists("Sinks"))
   {
-    Array<JsonView> sinksJsonList = jsonValue.GetArray("Sinks");
+    Aws::Utils::Array<JsonView> sinksJsonList = jsonValue.GetArray("Sinks");
     for(unsigned sinksIndex = 0; sinksIndex < sinksJsonList.GetLength(); ++sinksIndex)
     {
       m_sinks.push_back(sinksJsonList[sinksIndex].AsObject());
@@ -109,7 +109,7 @@ JsonValue MediaLiveConnectorPipeline::Jsonize() const
 
   if(m_sourcesHasBeenSet)
   {
-   Array<JsonValue> sourcesJsonList(m_sources.size());
+   Aws::Utils::Array<JsonValue> sourcesJsonList(m_sources.size());
    for(unsigned sourcesIndex = 0; sourcesIndex < sourcesJsonList.GetLength(); ++sourcesIndex)
    {
      sourcesJsonList[sourcesIndex].AsObject(m_sources[sourcesIndex].Jsonize());
@@ -120,7 +120,7 @@ JsonValue MediaLiveConnectorPipeline::Jsonize() const
 
   if(m_sinksHasBeenSet)
   {
-   Array<JsonValue> sinksJsonList(m_sinks.size());
+   Aws::Utils::Array<JsonValue> sinksJsonList(m_sinks.size());
    for(unsigned sinksIndex = 0; sinksIndex < sinksJsonList.GetLength(); ++sinksIndex)
    {
      sinksJsonList[sinksIndex].AsObject(m_sinks[sinksIndex].Jsonize());
@@ -148,12 +148,12 @@ JsonValue MediaLiveConnectorPipeline::Jsonize() const
 
   if(m_createdTimestampHasBeenSet)
   {
-   payload.WithString("CreatedTimestamp", m_createdTimestamp.ToGmtString(DateFormat::ISO_8601));
+   payload.WithString("CreatedTimestamp", m_createdTimestamp.ToGmtString(Aws::Utils::DateFormat::ISO_8601));
   }
 
   if(m_updatedTimestampHasBeenSet)
   {
-   payload.WithString("UpdatedTimestamp", m_updatedTimestamp.ToGmtString(DateFormat::ISO_8601));
+   payload.WithString("UpdatedTimestamp", m_updatedTimestamp.ToGmtString(Aws::Utils::DateFormat::ISO_8601));
   }
 
   return payload;

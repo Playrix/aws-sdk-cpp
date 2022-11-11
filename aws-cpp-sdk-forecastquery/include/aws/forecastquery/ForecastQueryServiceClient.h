@@ -5,68 +5,15 @@
 
 #pragma once
 #include <aws/forecastquery/ForecastQueryService_EXPORTS.h>
-#include <aws/forecastquery/ForecastQueryServiceErrors.h>
-#include <aws/core/client/AWSError.h>
 #include <aws/core/client/ClientConfiguration.h>
 #include <aws/core/client/AWSClient.h>
-#include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/core/utils/json/JsonSerializer.h>
-#include <aws/forecastquery/model/QueryForecastResult.h>
-#include <aws/forecastquery/model/QueryWhatIfForecastResult.h>
-#include <aws/core/client/AsyncCallerContext.h>
-#include <aws/core/http/HttpTypes.h>
-#include <future>
-#include <functional>
+#include <aws/forecastquery/ForecastQueryServiceServiceClientModel.h>
 
 namespace Aws
 {
-
-namespace Http
-{
-  class HttpClient;
-  class HttpClientFactory;
-} // namespace Http
-
-namespace Utils
-{
-  template< typename R, typename E> class Outcome;
-namespace Threading
-{
-  class Executor;
-} // namespace Threading
-} // namespace Utils
-
-namespace Auth
-{
-  class AWSCredentials;
-  class AWSCredentialsProvider;
-} // namespace Auth
-
-namespace Client
-{
-  class RetryStrategy;
-} // namespace Client
-
 namespace ForecastQueryService
 {
-
-namespace Model
-{
-        class QueryForecastRequest;
-        class QueryWhatIfForecastRequest;
-
-        typedef Aws::Utils::Outcome<QueryForecastResult, ForecastQueryServiceError> QueryForecastOutcome;
-        typedef Aws::Utils::Outcome<QueryWhatIfForecastResult, ForecastQueryServiceError> QueryWhatIfForecastOutcome;
-
-        typedef std::future<QueryForecastOutcome> QueryForecastOutcomeCallable;
-        typedef std::future<QueryWhatIfForecastOutcome> QueryWhatIfForecastOutcomeCallable;
-} // namespace Model
-
-  class ForecastQueryServiceClient;
-
-    typedef std::function<void(const ForecastQueryServiceClient*, const Model::QueryForecastRequest&, const Model::QueryForecastOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > QueryForecastResponseReceivedHandler;
-    typedef std::function<void(const ForecastQueryServiceClient*, const Model::QueryWhatIfForecastRequest&, const Model::QueryWhatIfForecastOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > QueryWhatIfForecastResponseReceivedHandler;
-
   /**
    * <p>Provides APIs for creating and managing Amazon Forecast resources.</p>
    */
@@ -74,27 +21,55 @@ namespace Model
   {
     public:
       typedef Aws::Client::AWSJsonClient BASECLASS;
+      static const char* SERVICE_NAME;
+      static const char* ALLOCATION_TAG;
 
        /**
         * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
-        ForecastQueryServiceClient(const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
+        ForecastQueryServiceClient(const Aws::ForecastQueryService::ForecastQueryServiceClientConfiguration& clientConfiguration = Aws::ForecastQueryService::ForecastQueryServiceClientConfiguration(),
+                                   std::shared_ptr<ForecastQueryServiceEndpointProviderBase> endpointProvider = Aws::MakeShared<ForecastQueryServiceEndpointProvider>(ALLOCATION_TAG));
 
        /**
         * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
         ForecastQueryServiceClient(const Aws::Auth::AWSCredentials& credentials,
-                                   const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
+                                   std::shared_ptr<ForecastQueryServiceEndpointProviderBase> endpointProvider = Aws::MakeShared<ForecastQueryServiceEndpointProvider>(ALLOCATION_TAG),
+                                   const Aws::ForecastQueryService::ForecastQueryServiceClientConfiguration& clientConfiguration = Aws::ForecastQueryService::ForecastQueryServiceClientConfiguration());
 
        /**
         * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
         * the default http client factory will be used
         */
         ForecastQueryServiceClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
-                                   const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
+                                   std::shared_ptr<ForecastQueryServiceEndpointProviderBase> endpointProvider = Aws::MakeShared<ForecastQueryServiceEndpointProvider>(ALLOCATION_TAG),
+                                   const Aws::ForecastQueryService::ForecastQueryServiceClientConfiguration& clientConfiguration = Aws::ForecastQueryService::ForecastQueryServiceClientConfiguration());
 
+
+        /* Legacy constructors due deprecation */
+       /**
+        * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
+        * is not specified, it will be initialized to default values.
+        */
+        ForecastQueryServiceClient(const Aws::Client::ClientConfiguration& clientConfiguration);
+
+       /**
+        * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
+        * is not specified, it will be initialized to default values.
+        */
+        ForecastQueryServiceClient(const Aws::Auth::AWSCredentials& credentials,
+                                   const Aws::Client::ClientConfiguration& clientConfiguration);
+
+       /**
+        * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
+        * the default http client factory will be used
+        */
+        ForecastQueryServiceClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
+                                   const Aws::Client::ClientConfiguration& clientConfiguration);
+
+        /* End of legacy constructors due deprecation */
         virtual ~ForecastQueryServiceClient();
 
 
@@ -145,14 +120,13 @@ namespace Model
 
 
       void OverrideEndpoint(const Aws::String& endpoint);
+      std::shared_ptr<ForecastQueryServiceEndpointProviderBase>& accessEndpointProvider();
     private:
-      void init(const Aws::Client::ClientConfiguration& clientConfiguration);
-        void QueryForecastAsyncHelper(const Model::QueryForecastRequest& request, const QueryForecastResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
-        void QueryWhatIfForecastAsyncHelper(const Model::QueryWhatIfForecastRequest& request, const QueryWhatIfForecastResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+      void init(const ForecastQueryServiceClientConfiguration& clientConfiguration);
 
-      Aws::String m_uri;
-      Aws::String m_configScheme;
+      ForecastQueryServiceClientConfiguration m_clientConfiguration;
       std::shared_ptr<Aws::Utils::Threading::Executor> m_executor;
+      std::shared_ptr<ForecastQueryServiceEndpointProviderBase> m_endpointProvider;
   };
 
 } // namespace ForecastQueryService

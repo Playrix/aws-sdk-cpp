@@ -421,31 +421,79 @@ namespace Model
      */
     inline RoutingProfile& AddTags(const char* key, const char* value) { m_tagsHasBeenSet = true; m_tags.emplace(key, value); return *this; }
 
+
+    /**
+     * <p>The number of associated queues in routing profile.</p>
+     */
+    inline long long GetNumberOfAssociatedQueues() const{ return m_numberOfAssociatedQueues; }
+
+    /**
+     * <p>The number of associated queues in routing profile.</p>
+     */
+    inline bool NumberOfAssociatedQueuesHasBeenSet() const { return m_numberOfAssociatedQueuesHasBeenSet; }
+
+    /**
+     * <p>The number of associated queues in routing profile.</p>
+     */
+    inline void SetNumberOfAssociatedQueues(long long value) { m_numberOfAssociatedQueuesHasBeenSet = true; m_numberOfAssociatedQueues = value; }
+
+    /**
+     * <p>The number of associated queues in routing profile.</p>
+     */
+    inline RoutingProfile& WithNumberOfAssociatedQueues(long long value) { SetNumberOfAssociatedQueues(value); return *this;}
+
+
+    /**
+     * <p>The number of associated users in routing profile.</p>
+     */
+    inline long long GetNumberOfAssociatedUsers() const{ return m_numberOfAssociatedUsers; }
+
+    /**
+     * <p>The number of associated users in routing profile.</p>
+     */
+    inline bool NumberOfAssociatedUsersHasBeenSet() const { return m_numberOfAssociatedUsersHasBeenSet; }
+
+    /**
+     * <p>The number of associated users in routing profile.</p>
+     */
+    inline void SetNumberOfAssociatedUsers(long long value) { m_numberOfAssociatedUsersHasBeenSet = true; m_numberOfAssociatedUsers = value; }
+
+    /**
+     * <p>The number of associated users in routing profile.</p>
+     */
+    inline RoutingProfile& WithNumberOfAssociatedUsers(long long value) { SetNumberOfAssociatedUsers(value); return *this;}
+
   private:
 
     Aws::String m_instanceId;
-    bool m_instanceIdHasBeenSet;
+    bool m_instanceIdHasBeenSet = false;
 
     Aws::String m_name;
-    bool m_nameHasBeenSet;
+    bool m_nameHasBeenSet = false;
 
     Aws::String m_routingProfileArn;
-    bool m_routingProfileArnHasBeenSet;
+    bool m_routingProfileArnHasBeenSet = false;
 
     Aws::String m_routingProfileId;
-    bool m_routingProfileIdHasBeenSet;
+    bool m_routingProfileIdHasBeenSet = false;
 
     Aws::String m_description;
-    bool m_descriptionHasBeenSet;
+    bool m_descriptionHasBeenSet = false;
 
     Aws::Vector<MediaConcurrency> m_mediaConcurrencies;
-    bool m_mediaConcurrenciesHasBeenSet;
+    bool m_mediaConcurrenciesHasBeenSet = false;
 
     Aws::String m_defaultOutboundQueueId;
-    bool m_defaultOutboundQueueIdHasBeenSet;
+    bool m_defaultOutboundQueueIdHasBeenSet = false;
 
     Aws::Map<Aws::String, Aws::String> m_tags;
-    bool m_tagsHasBeenSet;
+    bool m_tagsHasBeenSet = false;
+
+    long long m_numberOfAssociatedQueues;
+    bool m_numberOfAssociatedQueuesHasBeenSet = false;
+
+    long long m_numberOfAssociatedUsers;
+    bool m_numberOfAssociatedUsersHasBeenSet = false;
   };
 
 } // namespace Model
