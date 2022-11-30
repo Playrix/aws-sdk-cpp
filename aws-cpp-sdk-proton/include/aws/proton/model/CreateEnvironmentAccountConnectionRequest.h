@@ -95,6 +95,63 @@ namespace Model
 
 
     /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline const Aws::String& GetCodebuildRoleArn() const{ return m_codebuildRoleArn; }
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline bool CodebuildRoleArnHasBeenSet() const { return m_codebuildRoleArnHasBeenSet; }
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline void SetCodebuildRoleArn(const Aws::String& value) { m_codebuildRoleArnHasBeenSet = true; m_codebuildRoleArn = value; }
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline void SetCodebuildRoleArn(Aws::String&& value) { m_codebuildRoleArnHasBeenSet = true; m_codebuildRoleArn = std::move(value); }
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline void SetCodebuildRoleArn(const char* value) { m_codebuildRoleArnHasBeenSet = true; m_codebuildRoleArn.assign(value); }
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline CreateEnvironmentAccountConnectionRequest& WithCodebuildRoleArn(const Aws::String& value) { SetCodebuildRoleArn(value); return *this;}
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline CreateEnvironmentAccountConnectionRequest& WithCodebuildRoleArn(Aws::String&& value) { SetCodebuildRoleArn(std::move(value)); return *this;}
+
+    /**
+     * <p>The Amazon Resource Name (ARN) of an IAM service role in the environment
+     * account. Proton uses this role to provision infrastructure resources using
+     * CodeBuild-based provisioning in the associated environment account.</p>
+     */
+    inline CreateEnvironmentAccountConnectionRequest& WithCodebuildRoleArn(const char* value) { SetCodebuildRoleArn(value); return *this;}
+
+
+    /**
      * <p>The Amazon Resource Name (ARN) of the IAM service role that Proton uses when
      * provisioning directly defined components in the associated environment account.
      * It determines the scope of infrastructure that a component can provision in the
@@ -446,6 +503,9 @@ namespace Model
 
     Aws::String m_clientToken;
     bool m_clientTokenHasBeenSet = false;
+
+    Aws::String m_codebuildRoleArn;
+    bool m_codebuildRoleArnHasBeenSet = false;
 
     Aws::String m_componentRoleArn;
     bool m_componentRoleArnHasBeenSet = false;

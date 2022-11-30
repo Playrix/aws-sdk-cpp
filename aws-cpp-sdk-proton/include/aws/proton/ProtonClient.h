@@ -1241,7 +1241,9 @@ namespace Proton
         virtual void ListServiceInstanceProvisionedResourcesAsync(const Model::ListServiceInstanceProvisionedResourcesRequest& request, const ListServiceInstanceProvisionedResourcesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>List service instances with summary data.</p><p><h3>See Also:</h3>   <a
+         * <p>List service instances with summary data. This action lists service instances
+         * of all services in the Amazon Web Services account.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServiceInstances">AWS
          * API Reference</a></p>
          */

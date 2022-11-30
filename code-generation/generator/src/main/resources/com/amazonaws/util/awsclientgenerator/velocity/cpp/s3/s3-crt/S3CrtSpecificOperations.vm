@@ -187,9 +187,12 @@ static void ${operation.name}RequestShutdownCallback(void *user_data)
 #else
   S3Crt::Model::${operation.name}Outcome outcome(userData->s3CrtClient->GenerateXmlOutcome(userData->response));
 #end
-  auto handler = static_cast<const ${operation.name}ResponseReceivedHandler*>(userData->userCallback);
 #if($operation.request)
-  (*handler)(userData->s3CrtClient, *(reinterpret_cast<const ${operation.request.shape.name}*>(userData->originalRequest)), std::move(outcome), userData->userCallbackContext);
+#if($operation.name == "PutObject")
+  userData->putResponseHandler(userData->s3CrtClient, *(reinterpret_cast<const ${operation.name}Request*>(userData->originalRequest)), std::move(outcome), userData->asyncCallerContext);
+#elseif($operation.name == "GetObject")
+  userData->getResponseHandler(userData->s3CrtClient, *(reinterpret_cast<const ${operation.name}Request*>(userData->originalRequest)), std::move(outcome), userData->asyncCallerContext);
+#end
 #else
   (*handler)(userData->s3CrtClient, outcome, userData->userCallbackContext);
 #end
@@ -241,11 +244,25 @@ void ${className}::${operation.name}Async(${constText}${operation.request.shape.
   aws_s3_meta_request_options options;
   AWS_ZERO_STRUCT(options);
 
-  userData->userCallback = static_cast<const void*>(&handler);
-  userData->userCallbackContext = handlerContext;
-
+#if($operation.name == "PutObject")
+  userData->putResponseHandler = handler;
+#elseif($operation.name == "GetObject")
+  userData->getResponseHandler = handler;
+#end
+  userData->asyncCallerContext = handlerContext;
 #if($serviceModel.endpointRules)
   InitCommonCrtRequestOption(userData, &options, &request, endpointResolutionOutcome.GetResult().GetURI(), Aws::Http::HttpMethod::HTTP_${operation.http.method});
+  if (userData != nullptr &&
+    userData->request != nullptr &&
+    userData->request->GetContentBody() != nullptr &&
+    userData->request->GetContentBody()->fail())
+  {
+#if($operation.name == "PutObject")
+    return handler(this, request, PutObjectOutcome(Aws::Client::AWSError<S3CrtErrors>(S3CrtErrors::INVALID_PARAMETER_VALUE, "INVALID_PARAMETER_VALUE", "Input stream in bad state", false)), handlerContext);
+#elseif($operation.name == "GetObject")
+    return handler(this, request, GetObjectOutcome(Aws::Client::AWSError<S3CrtErrors>(S3CrtErrors::INVALID_PARAMETER_VALUE, "INVALID_PARAMETER_VALUE", "Output stream in bad state", false)), handlerContext);
+#end
+  }
 #else
   InitCommonCrtRequestOption(userData, &options, &request, uri, Aws::Http::HttpMethod::HTTP_${operation.http.method});
 #end
@@ -325,8 +342,11 @@ void ${className}::${operation.name}Async(${constText}${operation.name}ResponseR
   aws_s3_meta_request_options options;
   AWS_ZERO_STRUCT(options);
 
-  userData->userCallback = static_cast<const void*>(&handler);
-  userData->userCallbackContext = handlerContext;
+#if($operation.name == "PutObject")
+  userData->putResponseHandler = handler;
+#elseif($operation.name == "GetObject")
+  userData->getResponseHandler = handler;
+#end
   InitCommonCrtRequestOption(userData, &options, nullptr, ss.str(), Aws::Http::HttpMethod::HTTP_${operation.http.method});
   options.shutdown_callback = ${operation.name}RequestShutdownCallback;
 #if($operation.name == "PutObject")

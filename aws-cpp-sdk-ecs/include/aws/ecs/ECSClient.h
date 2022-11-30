@@ -625,7 +625,7 @@ namespace ECS
         /**
          * <p>Runs a command remotely on a container within a task.</p> <p>If you use a
          * condition key in your IAM policy to refine the conditions for the policy
-         * statement, for example limit the actions to a specific cluster, you recevie an
+         * statement, for example limit the actions to a specific cluster, you receive an
          * <code>AccessDeniedException</code> when there is a mismatch between the
          * condition key value and the corresponding parameter value.</p><p><h3>See
          * Also:</h3>   <a
@@ -643,6 +643,24 @@ namespace ECS
          * An Async wrapper for ExecuteCommand that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ExecuteCommandAsync(const Model::ExecuteCommandRequest& request, const ExecuteCommandResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the protection status of tasks in an Amazon ECS
+         * service.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/GetTaskProtection">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetTaskProtectionOutcome GetTaskProtection(const Model::GetTaskProtectionRequest& request) const;
+
+        /**
+         * A Callable wrapper for GetTaskProtection that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetTaskProtectionOutcomeCallable GetTaskProtectionCallable(const Model::GetTaskProtectionRequest& request) const;
+
+        /**
+         * An Async wrapper for GetTaskProtection that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetTaskProtectionAsync(const Model::GetTaskProtectionRequest& request, const GetTaskProtectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Lists the account settings for a specified principal.</p><p><h3>See
@@ -743,6 +761,30 @@ namespace ECS
          * An Async wrapper for ListServices that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ListServicesAsync(const Model::ListServicesRequest& request, const ListServicesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>This operation lists all of the services that are associated with a Cloud Map
+         * namespace. This list might include services in different clusters. In contrast,
+         * <code>ListServices</code> can only list services in one cluster at a time. If
+         * you need to filter the list of services in a single cluster by various
+         * parameters, use <code>ListServices</code>. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html">Service
+         * Connect</a> in the <i>Amazon Elastic Container Service Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListServicesByNamespace">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListServicesByNamespaceOutcome ListServicesByNamespace(const Model::ListServicesByNamespaceRequest& request) const;
+
+        /**
+         * A Callable wrapper for ListServicesByNamespace that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListServicesByNamespaceOutcomeCallable ListServicesByNamespaceCallable(const Model::ListServicesByNamespaceRequest& request) const;
+
+        /**
+         * An Async wrapper for ListServicesByNamespace that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListServicesByNamespaceAsync(const Model::ListServicesByNamespaceRequest& request, const ListServicesByNamespaceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>List the tags for an Amazon ECS resource.</p><p><h3>See Also:</h3>   <a
@@ -1250,10 +1292,14 @@ namespace ECS
          * the agent. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/agent-update-ecs-ami.html">Updating
          * the Amazon ECS container agent</a> in the <i>Amazon Elastic Container Service
-         * Developer Guide</i>.</p>  <p>The <code>UpdateContainerAgent</code> API
-         * requires an Amazon ECS-optimized AMI or Amazon Linux AMI with the
-         * <code>ecs-init</code> service installed and running. For help updating the
-         * Amazon ECS container agent on other operating systems, see <a
+         * Developer Guide</i>.</p>   <p>Agent updates with the
+         * <code>UpdateContainerAgent</code> API operation do not apply to Windows
+         * container instances. We recommend that you launch new container instances to
+         * update the agent version in your Windows clusters.</p>  <p>The
+         * <code>UpdateContainerAgent</code> API requires an Amazon ECS-optimized AMI or
+         * Amazon Linux AMI with the <code>ecs-init</code> service installed and running.
+         * For help updating the Amazon ECS container agent on other operating systems, see
+         * <a
          * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html#manually_update_agent">Manually
          * updating the Amazon ECS container agent</a> in the <i>Amazon Elastic Container
          * Service Developer Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1457,6 +1503,49 @@ namespace ECS
          * An Async wrapper for UpdateServicePrimaryTaskSet that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void UpdateServicePrimaryTaskSetAsync(const Model::UpdateServicePrimaryTaskSetRequest& request, const UpdateServicePrimaryTaskSetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Updates the protection status of a task. You can set
+         * <code>protectionEnabled</code> to <code>true</code> to protect your task from
+         * termination during scale-in events from <a
+         * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service
+         * Autoscaling</a> or <a
+         * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">deployments</a>.</p>
+         * <p>Task-protection, by default, expires after 2 hours at which point Amazon ECS
+         * unsets the <code>protectionEnabled</code> property making the task eligible for
+         * termination by a subsequent scale-in event.</p> <p>You can specify a custom
+         * expiration period for task protection from 1 minute to up to 2,880 minutes (48
+         * hours). To specify the custom expiration period, set the
+         * <code>expiresInMinutes</code> property. The <code>expiresInMinutes</code>
+         * property is always reset when you invoke this operation for a task that already
+         * has <code>protectionEnabled</code> set to <code>true</code>. You can keep
+         * extending the protection expiration period of a task by invoking this operation
+         * repeatedly.</p> <p>To learn more about Amazon ECS task protection, see <a
+         * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection.html">Task
+         * scale-in protection</a> in the <i> <i>Amazon Elastic Container Service Developer
+         * Guide</i> </i>.</p>  <p>This operation is only supported for tasks
+         * belonging to an Amazon ECS service. Invoking this operation for a standalone
+         * task will result in an <code>TASK_NOT_VALID</code> failure. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html">API
+         * failure reasons</a>.</p>   <p>If you prefer to set task
+         * protection from within the container, we recommend using the <a
+         * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection-endpoint.html">Task
+         * scale-in protection endpoint</a>.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateTaskProtection">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateTaskProtectionOutcome UpdateTaskProtection(const Model::UpdateTaskProtectionRequest& request) const;
+
+        /**
+         * A Callable wrapper for UpdateTaskProtection that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateTaskProtectionOutcomeCallable UpdateTaskProtectionCallable(const Model::UpdateTaskProtectionRequest& request) const;
+
+        /**
+         * An Async wrapper for UpdateTaskProtection that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateTaskProtectionAsync(const Model::UpdateTaskProtectionRequest& request, const UpdateTaskProtectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Modifies a task set. This is used when a service uses the

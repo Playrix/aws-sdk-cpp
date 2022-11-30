@@ -255,6 +255,24 @@ namespace WorkSpaces
         virtual void CreateIpGroupAsync(const Model::CreateIpGroupRequest& request, const CreateIpGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Creates a Standby WorkSpace in a secondary region.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateStandbyWorkspaces">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateStandbyWorkspacesOutcome CreateStandbyWorkspaces(const Model::CreateStandbyWorkspacesRequest& request) const;
+
+        /**
+         * A Callable wrapper for CreateStandbyWorkspaces that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateStandbyWorkspacesOutcomeCallable CreateStandbyWorkspacesCallable(const Model::CreateStandbyWorkspacesRequest& request) const;
+
+        /**
+         * An Async wrapper for CreateStandbyWorkspaces that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateStandbyWorkspacesAsync(const Model::CreateStandbyWorkspacesRequest& request, const CreateStandbyWorkspacesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Creates the specified tags for the specified WorkSpaces
          * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateTags">AWS
@@ -1004,6 +1022,24 @@ namespace WorkSpaces
          * An Async wrapper for ModifyAccount that queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ModifyAccountAsync(const Model::ModifyAccountRequest& request, const ModifyAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Modifies the properties of the certificate-based authentication you want to
+         * use with your WorkSpaces.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyCertificateBasedAuthProperties">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ModifyCertificateBasedAuthPropertiesOutcome ModifyCertificateBasedAuthProperties(const Model::ModifyCertificateBasedAuthPropertiesRequest& request) const;
+
+        /**
+         * A Callable wrapper for ModifyCertificateBasedAuthProperties that returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ModifyCertificateBasedAuthPropertiesOutcomeCallable ModifyCertificateBasedAuthPropertiesCallable(const Model::ModifyCertificateBasedAuthPropertiesRequest& request) const;
+
+        /**
+         * An Async wrapper for ModifyCertificateBasedAuthProperties that queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ModifyCertificateBasedAuthPropertiesAsync(const Model::ModifyCertificateBasedAuthPropertiesRequest& request, const ModifyCertificateBasedAuthPropertiesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Modifies the properties of the specified Amazon WorkSpaces

@@ -1961,8 +1961,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -1997,8 +1997,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -2033,8 +2033,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -2069,8 +2069,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -2105,8 +2105,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -2141,8 +2141,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -2177,8 +2177,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -2213,8 +2213,8 @@ namespace Model
      * be used by the DB instance is managed by the DB cluster.</p> <p> <b>Amazon RDS
      * Custom for Oracle</b> </p> <p>A custom engine version (CEV) that you have
      * previously created. This setting is required for RDS Custom for Oracle. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An
-     * example identifier is <code>19.my_cev1</code>. For more information, see <a
+     * name has the following format: 19.<i>customized_string</i>. A valid CEV name is
+     * <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User
      * Guide</i>.</p> <p> <b>Amazon RDS Custom for SQL Server</b> </p> <p>See <a
@@ -4584,25 +4584,29 @@ namespace Model
 
     /**
      * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
-     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     * setting applies only to the <code>gp3</code> storage type.</p> <p>This setting
+     * doesn't apply to RDS Custom or Amazon Aurora.</p>
      */
     inline int GetStorageThroughput() const{ return m_storageThroughput; }
 
     /**
      * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
-     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     * setting applies only to the <code>gp3</code> storage type.</p> <p>This setting
+     * doesn't apply to RDS Custom or Amazon Aurora.</p>
      */
     inline bool StorageThroughputHasBeenSet() const { return m_storageThroughputHasBeenSet; }
 
     /**
      * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
-     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     * setting applies only to the <code>gp3</code> storage type.</p> <p>This setting
+     * doesn't apply to RDS Custom or Amazon Aurora.</p>
      */
     inline void SetStorageThroughput(int value) { m_storageThroughputHasBeenSet = true; m_storageThroughput = value; }
 
     /**
      * <p>Specifies the storage throughput value for the DB instance.</p> <p>This
-     * setting doesn't apply to RDS Custom or Amazon Aurora.</p>
+     * setting applies only to the <code>gp3</code> storage type.</p> <p>This setting
+     * doesn't apply to RDS Custom or Amazon Aurora.</p>
      */
     inline CreateDBInstanceRequest& WithStorageThroughput(int value) { SetStorageThroughput(value); return *this;}
 

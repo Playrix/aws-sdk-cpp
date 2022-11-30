@@ -28,6 +28,7 @@
 #include <aws/workspaces/model/CreateConnectClientAddInRequest.h>
 #include <aws/workspaces/model/CreateConnectionAliasRequest.h>
 #include <aws/workspaces/model/CreateIpGroupRequest.h>
+#include <aws/workspaces/model/CreateStandbyWorkspacesRequest.h>
 #include <aws/workspaces/model/CreateTagsRequest.h>
 #include <aws/workspaces/model/CreateUpdatedWorkspaceImageRequest.h>
 #include <aws/workspaces/model/CreateWorkspaceBundleRequest.h>
@@ -64,6 +65,7 @@
 #include <aws/workspaces/model/ListAvailableManagementCidrRangesRequest.h>
 #include <aws/workspaces/model/MigrateWorkspaceRequest.h>
 #include <aws/workspaces/model/ModifyAccountRequest.h>
+#include <aws/workspaces/model/ModifyCertificateBasedAuthPropertiesRequest.h>
 #include <aws/workspaces/model/ModifyClientPropertiesRequest.h>
 #include <aws/workspaces/model/ModifySamlPropertiesRequest.h>
 #include <aws/workspaces/model/ModifySelfservicePermissionsRequest.h>
@@ -377,6 +379,30 @@ void WorkSpacesClient::CreateIpGroupAsync(const CreateIpGroupRequest& request, c
   m_executor->Submit( [this, request, handler, context]()
     {
       handler(this, request, CreateIpGroup(request), context);
+    } );
+}
+
+CreateStandbyWorkspacesOutcome WorkSpacesClient::CreateStandbyWorkspaces(const CreateStandbyWorkspacesRequest& request) const
+{
+  AWS_OPERATION_CHECK_PTR(m_endpointProvider, CreateStandbyWorkspaces, CoreErrors, CoreErrors::ENDPOINT_RESOLUTION_FAILURE);
+  ResolveEndpointOutcome endpointResolutionOutcome = m_endpointProvider->ResolveEndpoint(request.GetEndpointContextParams());
+  AWS_OPERATION_CHECK_SUCCESS(endpointResolutionOutcome, CreateStandbyWorkspaces, CoreErrors, CoreErrors::ENDPOINT_RESOLUTION_FAILURE, endpointResolutionOutcome.GetError().GetMessage());
+  return CreateStandbyWorkspacesOutcome(MakeRequest(request, endpointResolutionOutcome.GetResult(), Aws::Http::HttpMethod::HTTP_POST, Aws::Auth::SIGV4_SIGNER));
+}
+
+CreateStandbyWorkspacesOutcomeCallable WorkSpacesClient::CreateStandbyWorkspacesCallable(const CreateStandbyWorkspacesRequest& request) const
+{
+  auto task = Aws::MakeShared< std::packaged_task< CreateStandbyWorkspacesOutcome() > >(ALLOCATION_TAG, [this, request](){ return this->CreateStandbyWorkspaces(request); } );
+  auto packagedFunction = [task]() { (*task)(); };
+  m_executor->Submit(packagedFunction);
+  return task->get_future();
+}
+
+void WorkSpacesClient::CreateStandbyWorkspacesAsync(const CreateStandbyWorkspacesRequest& request, const CreateStandbyWorkspacesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const
+{
+  m_executor->Submit( [this, request, handler, context]()
+    {
+      handler(this, request, CreateStandbyWorkspaces(request), context);
     } );
 }
 
@@ -1241,6 +1267,30 @@ void WorkSpacesClient::ModifyAccountAsync(const ModifyAccountRequest& request, c
   m_executor->Submit( [this, request, handler, context]()
     {
       handler(this, request, ModifyAccount(request), context);
+    } );
+}
+
+ModifyCertificateBasedAuthPropertiesOutcome WorkSpacesClient::ModifyCertificateBasedAuthProperties(const ModifyCertificateBasedAuthPropertiesRequest& request) const
+{
+  AWS_OPERATION_CHECK_PTR(m_endpointProvider, ModifyCertificateBasedAuthProperties, CoreErrors, CoreErrors::ENDPOINT_RESOLUTION_FAILURE);
+  ResolveEndpointOutcome endpointResolutionOutcome = m_endpointProvider->ResolveEndpoint(request.GetEndpointContextParams());
+  AWS_OPERATION_CHECK_SUCCESS(endpointResolutionOutcome, ModifyCertificateBasedAuthProperties, CoreErrors, CoreErrors::ENDPOINT_RESOLUTION_FAILURE, endpointResolutionOutcome.GetError().GetMessage());
+  return ModifyCertificateBasedAuthPropertiesOutcome(MakeRequest(request, endpointResolutionOutcome.GetResult(), Aws::Http::HttpMethod::HTTP_POST, Aws::Auth::SIGV4_SIGNER));
+}
+
+ModifyCertificateBasedAuthPropertiesOutcomeCallable WorkSpacesClient::ModifyCertificateBasedAuthPropertiesCallable(const ModifyCertificateBasedAuthPropertiesRequest& request) const
+{
+  auto task = Aws::MakeShared< std::packaged_task< ModifyCertificateBasedAuthPropertiesOutcome() > >(ALLOCATION_TAG, [this, request](){ return this->ModifyCertificateBasedAuthProperties(request); } );
+  auto packagedFunction = [task]() { (*task)(); };
+  m_executor->Submit(packagedFunction);
+  return task->get_future();
+}
+
+void WorkSpacesClient::ModifyCertificateBasedAuthPropertiesAsync(const ModifyCertificateBasedAuthPropertiesRequest& request, const ModifyCertificateBasedAuthPropertiesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const
+{
+  m_executor->Submit( [this, request, handler, context]()
+    {
+      handler(this, request, ModifyCertificateBasedAuthProperties(request), context);
     } );
 }
 
